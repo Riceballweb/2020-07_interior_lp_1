@@ -1,44 +1,42 @@
-@import "node_modules/slick-carousel/slick/css/slick"
-@import "node_modules/slick-carousel/slick/css/slick"
-
+@import "sass/variable"
 
 //Import Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap"
 
+@import "sass/modules"
 
+\:root
+   --primary: #555555
 body
+  background: url('/images/bg.png') repeat center
+  background-color: $light-gray
   font-family: 'Noto Sans TC', sans-serif
 
 section
-  margin: 4rem 0
+  margin: 6rem 0
 
 .section-hero
-  height: 70vh
+  margin: 0
+  height: 100vh
   background: lightgray
   color: white
 
   .jumbotron
-    background: url("https://placekitten.com/g/1200/600") no-repeat center fixed
+    background: url("https://placekitten.com/g/1960/1080") no-repeat center fixed
     display: flex
     align-items: center
     height: 100%
 
-.text-block
-  display: inline-block
-  position: relative
-  background: black
-  color: white
-  font-size: 1.5rem
-  white-space: nowrap
-  width: 100px
-  height: 100px
+.hero-list
+  list-style-type: none
+  padding: 0
 
-  div
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
+  li
+    display: inline-block
+    margin-right: 1rem
 
+.section-question
+  margin-top: -5rem
 
 .timeline
   padding: 50px 0
@@ -56,11 +54,11 @@ section
     padding: 5px 15px
 
   h3
-    font-weight: lighter
-    background: var(--blue)
+    font-weight: bold
+
 
   p, time
-    color: var(--blue)
+    color: $primary
 
   &::before
     content: ""
@@ -69,21 +67,21 @@ section
     top: 0
     left: 50%
     width: 0
-    border-left: 2px dashed var(--blue)
+    border-left: 2px dashed $sub
     height: 100%
     z-index: 1
     transform: translateX(-50%)
 
 .timeline-content
-  border: 1px solid var(--blue)
+
   position: relative
   border-radius: 0 0 10px 10px
-  box-shadow: 0px 3px 25px 0px rgba(10, 55, 90, 0.2)
+
 
 .timeline-nodes
   &:nth-child(odd)
     h3, p
-      text-align: right
+      text-align: left
 
     .timeline-date
       text-align: left
@@ -97,7 +95,7 @@ section
     top: 5%
     left: 100%
     width: 0
-    border-left: 10px solid var(--blue)
+    border-left: 10px solid $primary
     border-top: 10px solid transparent
     border-bottom: 10px solid transparent
 
@@ -107,7 +105,7 @@ section
     top: 5%
     right: 100%
     width: 0
-    border-right: 10px solid var(--blue)
+    border-right: 10px solid $primary
     border-top: 10px solid transparent
     border-bottom: 10px solid transparent
 
@@ -119,7 +117,7 @@ section
     content: ""
     width: 80px
     height: 80px
-    border: 2px solid var(--blue)
+    border: 2px solid $primary
     border-radius: 50%
     display: block
     position: absolute
@@ -135,6 +133,23 @@ section
 
   span
     font-size: 1.5rem
+
+.section-prove
+  background: url(/images/sectionbg-prove.jpg) no-repeat bottom
+  background-size: cover
+
+.section-video
+
+.video-content
+  &::before
+    content: ''
+    top: -10px
+    left: -10px
+    position: absolute
+    display: block
+    width: 20px
+    height: 20px
+    background: $sub
 
 /*small device style
 
@@ -155,7 +170,7 @@ section
       top: 0
       left: 4%
       width: 0
-      border-left: 2px dashed var(--blue)
+      border-left: 2px dashed $primary
       height: 100%
       z-index: 1
       transform: translateX(-50%)
@@ -182,7 +197,7 @@ section
       right: 100%
       width: 0
       border-left: 0
-      border-right: 10px solid var(--blue)
+      border-right: 10px solid $primary
       border-top: 10px solid transparent
       border-bottom: 10px solid transparent
 
@@ -193,7 +208,7 @@ section
         top: 5%
         right: 100%
         width: 0
-        border-right: 10px solid var(--blue)
+        border-right: 10px solid $primary
         border-top: 10px solid transparent
         border-bottom: 10px solid transparent
 
