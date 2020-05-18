@@ -1,4 +1,7 @@
 @charset "UTF-8";
+:root {
+  --primary: #555555; }
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7165,6 +7168,8 @@ a.text-dark:hover, a.text-dark:focus {
   .title-box h2 {
     font-weight: bold;
     color: #103D65; }
+  .title-box h3 {
+    font-size: 1.3rem; }
 
 .text-block {
   margin-right: 1rem;
@@ -7209,16 +7214,12 @@ mark,
   color: #FF693A;
   background-color: transparent; }
 
-.cards .card {
+.card {
   margin: 0 2rem;
   background: transparent;
   border: 0; }
-
-.cards h3 {
-  letter-spacing: 2px; }
-
-:root {
-  --primary: #555555; }
+  .card h3 {
+    letter-spacing: 2px; }
 
 body {
   background: url("/images/bg.png") repeat center;
@@ -7234,7 +7235,7 @@ section {
   background: lightgray;
   color: white; }
   .section-hero .jumbotron {
-    background: url("https://placekitten.com/g/1960/1080") no-repeat center fixed;
+    background: url("https://placekitten.com/g/1961/1080") no-repeat center fixed;
     display: flex;
     align-items: center;
     height: 100%; }
@@ -7243,11 +7244,25 @@ section {
   list-style-type: none;
   padding: 0; }
   .hero-list li {
+    position: relative;
     display: inline-block;
-    margin-right: 1rem; }
+    margin-right: 2rem; }
+    .hero-list li::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: 50%;
+      left: -20px;
+      transform: translateY(-50%);
+      width: 15px;
+      height: 15px;
+      background: url(../images/svg/icon-checked.svg) no-repeat center; }
 
 .section-question {
   margin-top: -5rem; }
+
+.card-question .card {
+  max-width: 300px; }
 
 .timeline {
   padding: 50px 0;
@@ -7338,6 +7353,35 @@ section {
 .section-prove {
   background: url(/images/sectionbg-prove.jpg) no-repeat bottom;
   background-size: cover; }
+
+.section-data {
+  margin: 0;
+  background: red; }
+
+.card-counter .card {
+  overflow: hidden;
+  max-width: 300px;
+  color: #103D65;
+  border: 0.3rem solid #103D65; }
+
+.card-counter .card-body {
+  padding: 0;
+  margin-bottom: 1rem; }
+
+.card-counter h3 {
+  padding: 1rem 0;
+  background: #103D65;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold; }
+
+.card-counter h4 {
+  color: #FF693A;
+  font-weight: bold;
+  font-size: 3rem; }
+
+.card-counter small {
+  font-size: 1.2rem; }
 
 .video-content::before {
   content: '';
