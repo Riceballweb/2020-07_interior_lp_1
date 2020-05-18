@@ -10,9 +10,6 @@ body
   background-color: $light-gray
   font-family: 'Noto Sans TC', sans-serif
 
-section
-  margin: 6rem 0
-
 .section-hero
   margin: 0
   height: 100vh
@@ -151,9 +148,11 @@ section
   background: url(/images/sectionbg-prove.jpg) no-repeat bottom
   background-size: cover
 
+
 .section-data
-  margin: 0
-  background: red
+  background: url(../images/sectionbg-counter.jpg) no-repeat top
+  background-size: contain
+
 
 
 .card-counter
@@ -184,6 +183,7 @@ section
 
 .section-video
 
+
 .video-content
   &::before
     content: ''
@@ -194,6 +194,20 @@ section
     width: 20px
     height: 20px
     background: $sub
+
+  h3
+    font-weight: bold
+
+.section-signup
+  background: $primary
+
+.footer
+  padding: 5rem
+  color: $light
+  background: $primary-dark
+
+.footer__logo
+  min-width: 300px
 
 /*small device style
 
@@ -279,26 +293,3 @@ section
     &::before
       width: 60px
       height: 60px
-
-.gal
-  -webkit-column-count: 3
-
-  /* Chrome, Safari, Opera
-  -moz-column-count: 3
-
-  /* Firefox
-  column-count: 3
-
-  img
-    width: 100%
-    padding: 7px 0
-
-@media (max-width: 500px)
-  .gal
-    -webkit-column-count: 1
-
-    /* Chrome, Safari, Opera
-    -moz-column-count: 1
-
-    /* Firefox
-    column-count: 1

@@ -7146,11 +7146,16 @@ a.text-dark:hover, a.text-dark:focus {
   margin: 100px 0;
   width: 100%;
   height: 250px;
-  background: red; }
+  background: #EFEEF0;
+  border: 5px dashed #103D65;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .debug-block::before {
     content: '=== 此區塊施工中 ===';
     font-size: 2rem;
-    color: white;
+    color: #103D65;
     font-weight: bold; }
 
 .highlight-box {
@@ -7196,8 +7201,7 @@ a.text-dark:hover, a.text-dark:focus {
 .namecard-item {
   background: white;
   min-width: 600px;
-  border-radius: 5px;
-  overflow: hidden; }
+  border-radius: 5px; }
 
 .namecard-content {
   text-align: left;
@@ -7225,9 +7229,6 @@ body {
   background: url("/images/bg.png") repeat center;
   background-color: #d6d6d6;
   font-family: 'Noto Sans TC', sans-serif; }
-
-section {
-  margin: 6rem 0; }
 
 .section-hero {
   margin: 0;
@@ -7355,8 +7356,8 @@ section {
   background-size: cover; }
 
 .section-data {
-  margin: 0;
-  background: red; }
+  background: url(../images/sectionbg-counter.jpg) no-repeat top;
+  background-size: contain; }
 
 .card-counter .card {
   overflow: hidden;
@@ -7392,6 +7393,20 @@ section {
   width: 20px;
   height: 20px;
   background: #FF693A; }
+
+.video-content h3 {
+  font-weight: bold; }
+
+.section-signup {
+  background: #103D65; }
+
+.footer {
+  padding: 5rem;
+  color: #EFEEF0;
+  background: #041321; }
+
+.footer__logo {
+  min-width: 300px; }
 
 /*small device style */
 @media (max-width: 767px) {
@@ -7459,21 +7474,3 @@ section {
     .timeline-image::before {
       width: 60px;
       height: 60px; } }
-
-.gal {
-  -webkit-column-count: 3;
-  /* Chrome, Safari, Opera */
-  -moz-column-count: 3;
-  /* Firefox */
-  column-count: 3; }
-  .gal img {
-    width: 100%;
-    padding: 7px 0; }
-
-@media (max-width: 500px) {
-  .gal {
-    -webkit-column-count: 1;
-    /* Chrome, Safari, Opera */
-    -moz-column-count: 1;
-    /* Firefox */
-    column-count: 1; } }

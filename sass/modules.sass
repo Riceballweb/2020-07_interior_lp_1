@@ -3,12 +3,17 @@
   margin: 100px 0
   width: 100%
   height: 250px
-  background: red
+  background: $light
+  border: 5px dashed $primary
+  text-align: center
+  display: flex
+  justify-content: center
+  align-items: center
 
   &::before
     content: '=== 此區塊施工中 ==='
     font-size: 2rem
-    color: white
+    color: $primary
     font-weight: bold
 
 //highlight-box
@@ -60,12 +65,12 @@
   div
     margin: 0 2rem
 
-.namecard-item
 
+.namecard-item
   background: white
   min-width: 600px
   border-radius: $border-radius
-  overflow: hidden
+
 
 
 .namecard-content
