@@ -7167,9 +7167,33 @@ a.text-dark:hover, a.text-dark:focus {
   padding: .3rem 1rem; }
 
 .title-box {
+  position: relative;
   background: white;
   padding: 2rem;
+  margin: 4rem 0;
   display: inline-block; }
+  .title-box::before {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: -4px;
+    right: -4px;
+    display: block;
+    border: solid black;
+    border-width: 2px;
+    content: "";
+    transform: rotate(-1deg); }
+  .title-box::after {
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: -4px;
+    right: -4px;
+    display: block;
+    border: solid black;
+    border-width: 3px;
+    content: "";
+    transform: rotate(2deg); }
   .title-box h2 {
     font-weight: bold;
     color: #103D65; }
@@ -7199,13 +7223,14 @@ a.text-dark:hover, a.text-dark:focus {
     margin: 0 2rem; }
 
 .namecard-item {
+  overflow: hidden;
   background: white;
   min-width: 600px;
   border-radius: 5px; }
 
 .namecard-content {
   text-align: left;
-  margin: 2rem; }
+  padding: 2rem; }
   .namecard-content h3 {
     font-weight: bold; }
   .namecard-content h4 {
@@ -7226,8 +7251,8 @@ mark,
     letter-spacing: 2px; }
 
 body {
-  background: url("/images/bg.png") repeat center;
-  background-color: #d6d6d6;
+  background: url("/images/png/bg.png") repeat center;
+  background-color: #2385CB;
   font-family: 'Noto Sans TC', sans-serif; }
 
 .section-hero {
@@ -7260,7 +7285,8 @@ body {
       background: url(../images/svg/icon-checked.svg) no-repeat center; }
 
 .section-question {
-  margin-top: -5rem; }
+  margin-top: -5rem;
+  margin-bottom: 5rem; }
 
 .card-question .card {
   max-width: 300px; }
@@ -7270,19 +7296,15 @@ body {
   position: relative; }
 
 .timeline-nodes {
-  padding-bottom: 25px;
   position: relative; }
   .timeline-nodes:nth-child(even) {
     flex-direction: row-reverse; }
 
 .timeline h3, .timeline p {
-  padding: 5px 15px; }
+  color: #103D65; }
 
 .timeline h3 {
   font-weight: bold; }
-
-.timeline p, .timeline time {
-  color: #103D65; }
 
 .timeline::before {
   content: "";
@@ -7291,14 +7313,29 @@ body {
   top: 0;
   left: 50%;
   width: 0;
-  border-left: 2px dashed #FF693A;
+  border-left: 6px solid #FF693A;
   height: 100%;
   z-index: 1;
   transform: translateX(-50%); }
 
 .timeline-content {
+  padding-bottom: 100px;
   position: relative;
   border-radius: 0 0 10px 10px; }
+  .timeline-content .tab-content {
+    border: 3px solid #103D65;
+    background: white;
+    padding: 2rem 1rem; }
+  .timeline-content .nav-tabs {
+    border: 0; }
+  .timeline-content .nav-link {
+    letter-spacing: 2px;
+    background: white; }
+  .timeline-content .nav-tabs .nav-link.active {
+    background: #103D65;
+    border: 0;
+    color: #EFEEF0;
+    font-weight: bold; }
 
 .timeline-nodes:nth-child(odd) h3, .timeline-nodes:nth-child(odd) p {
   text-align: left; }
@@ -7312,7 +7349,7 @@ body {
 .timeline-nodes:nth-child(odd) .timeline-content::after {
   content: "";
   position: absolute;
-  top: 5%;
+  top: 30%;
   left: 100%;
   width: 0;
   border-left: 10px solid #103D65;
@@ -7322,7 +7359,7 @@ body {
 .timeline-nodes:nth-child(even) .timeline-content::after {
   content: "";
   position: absolute;
-  top: 5%;
+  top: 30%;
   right: 100%;
   width: 0;
   border-right: 10px solid #103D65;
@@ -7334,9 +7371,8 @@ body {
   z-index: 100; }
   .timeline-image::before {
     content: "";
-    width: 80px;
-    height: 80px;
-    border: 2px solid #103D65;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     display: block;
     position: absolute;
@@ -7348,10 +7384,14 @@ body {
   .timeline-image div {
     position: relative;
     z-index: 100; }
-  .timeline-image span {
-    font-size: 1.5rem; }
+  .timeline-image .timeline-image__number {
+    font-size: 2rem;
+    font-weight: bold; }
 
 .section-prove {
+  position: relative;
+  margin-top: -60px;
+  padding: 5rem 0;
   background: url(/images/sectionbg-prove.jpg) no-repeat bottom;
   background-size: cover; }
 
@@ -7360,6 +7400,7 @@ body {
   background-size: contain; }
 
 .card-counter .card {
+  background: white;
   overflow: hidden;
   max-width: 300px;
   color: #103D65;
@@ -7383,6 +7424,9 @@ body {
 
 .card-counter small {
   font-size: 1.2rem; }
+
+.section-gallery {
+  background: #FF693A; }
 
 .video-content::before {
   content: '';

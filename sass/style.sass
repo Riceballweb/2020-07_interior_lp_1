@@ -6,8 +6,9 @@
 @import "sass/modules"
 
 body
-  background: url('/images/bg.png') repeat center
-  background-color: $light-gray
+  background: url('/images/png/bg.png') repeat center
+  // background-color: $light-gray
+  background-color: #2385CB
   font-family: 'Noto Sans TC', sans-serif
 
 .section-hero
@@ -44,32 +45,31 @@ body
 
 .section-question
   margin-top: -5rem
+  margin-bottom: 5rem
 
 .card-question
   .card
     max-width: 300px
+
+.section-timeline
 
 .timeline
   padding: 50px 0
   position: relative
 
 .timeline-nodes
-  padding-bottom: 25px
   position: relative
 
   &:nth-child(even)
     flex-direction: row-reverse
 
+
 .timeline
   h3, p
-    padding: 5px 15px
+    color: $primary
 
   h3
     font-weight: bold
-
-
-  p, time
-    color: $primary
 
   &::before
     content: ""
@@ -78,15 +78,36 @@ body
     top: 0
     left: 50%
     width: 0
-    border-left: 2px dashed $sub
+    border-left: 6px solid $sub
     height: 100%
     z-index: 1
     transform: translateX(-50%)
 
+// Overwrite bootstrap tab
 .timeline-content
+  padding-bottom: 100px
   position: relative
   border-radius: 0 0 10px 10px
 
+
+  .tab-content
+    border: 3px solid $primary
+    background: white
+    padding: 2rem 1rem
+
+
+  .nav-tabs
+    border: 0
+
+  .nav-link
+    letter-spacing: 2px
+    background: white
+
+  .nav-tabs .nav-link.active
+    background: $primary
+    border: 0
+    color: $light
+    font-weight: bold
 
 .timeline-nodes
   &:nth-child(odd)
@@ -102,7 +123,7 @@ body
   &:nth-child(odd) .timeline-content::after
     content: ""
     position: absolute
-    top: 5%
+    top: 30%
     left: 100%
     width: 0
     border-left: 10px solid $primary
@@ -112,7 +133,7 @@ body
   &:nth-child(even) .timeline-content::after
     content: ""
     position: absolute
-    top: 5%
+    top: 30%
     right: 100%
     width: 0
     border-right: 10px solid $primary
@@ -120,14 +141,15 @@ body
     border-bottom: 10px solid transparent
 
 .timeline-image
+
   position: relative
   z-index: 100
 
   &::before
     content: ""
-    width: 80px
-    height: 80px
-    border: 2px solid $primary
+    width: 100px
+    height: 100px
+
     border-radius: 50%
     display: block
     position: absolute
@@ -141,22 +163,26 @@ body
     position: relative
     z-index: 100
 
-  span
-    font-size: 1.5rem
+  .timeline-image__number
+    font-size: 2rem
+    font-weight: bold
 
 .section-prove
+  position: relative
+  margin-top: -60px
+  padding: 5rem 0
   background: url(/images/sectionbg-prove.jpg) no-repeat bottom
   background-size: cover
-
 
 .section-data
   background: url(../images/sectionbg-counter.jpg) no-repeat top
   background-size: contain
 
-
+.section-counter
 
 .card-counter
   .card
+    background: white
     overflow: hidden
     max-width: 300px
     color: $primary
@@ -180,6 +206,9 @@ body
 
   small
     font-size: 1.2rem
+
+.section-gallery
+  background: $sub
 
 .section-video
 

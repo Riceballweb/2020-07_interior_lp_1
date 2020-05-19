@@ -27,9 +27,37 @@
 
 // contain headings
 .title-box
+  position: relative
   background: white
   padding: 2rem
+  margin: 4rem 0
   display: inline-block
+
+  &::before
+    position: absolute
+    top: 1px
+    bottom: 1px
+    left: -4px
+    right: -4px
+    display: block
+    border: solid black
+    border-width: 2px
+    content: ""
+    transform: rotate(-1deg)
+
+  &::after
+    position: absolute
+    top: 1px
+    bottom: 1px
+    left: -4px
+    right: -4px
+    display: block
+    border: solid black
+    border-width: 3px
+    content: ""
+    transform: rotate(2deg)
+
+
 
   h2
     font-weight: bold
@@ -67,17 +95,17 @@
 
 
 .namecard-item
-
+  overflow: hidden
   background: white
   min-width: 600px
   border-radius: $border-radius
 
-
-
 .namecard-content
   text-align: left
-  margin: 2rem
+  padding: 2rem
+
   h3
+
     font-weight: bold
 
   h4
