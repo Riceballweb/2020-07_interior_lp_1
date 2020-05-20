@@ -1,4 +1,63 @@
 @charset "UTF-8";
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+/* Main styles */
+body {
+  margin-top: 13.5rem;
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear; }
+
 :root {
   --primary: #555555; }
 
@@ -7217,24 +7276,34 @@ a.text-dark:hover, a.text-dark:focus {
     left: 50%;
     transform: translate(-50%, -50%); }
 
-.namecard {
-  width: 130%; }
-  .namecard div {
-    margin: 0 2rem; }
+.namecard .slick-list {
+  overflow: inherit; }
 
-.namecard-item {
+.namecard div {
+  margin: 0 2rem; }
+
+.namecard__item {
   overflow: hidden;
   background: white;
-  min-width: 600px;
+  min-width: 650px;
   border-radius: 5px; }
+  .namecard__item img {
+    max-height: 250px; }
 
-.namecard-content {
+.namecard__item__content {
   text-align: left;
   padding: 2rem; }
-  .namecard-content h3 {
-    font-weight: bold; }
-  .namecard-content h4 {
-    font-size: 1rem; }
+
+span {
+  display: inline-block;
+  color: gray;
+  margin-bottom: 1rem; }
+
+h3 {
+  font-weight: bold; }
+
+h4 {
+  font-size: 1rem; }
 
 mark,
 .mark {
@@ -7251,7 +7320,7 @@ mark,
     letter-spacing: 2px; }
 
 body {
-  background: url("/images/png/bg.png") repeat center;
+  overflow-x: hidden;
   background-color: #0874c2;
   font-family: 'Noto Sans TC', sans-serif;
   color: #041321; }
@@ -7259,16 +7328,40 @@ body {
 .section-hero {
   margin: 0;
   height: 100vh;
-  background: lightgray;
   color: white; }
   .section-hero .jumbotron {
-    background: url("https://placekitten.com/g/1961/1080") no-repeat center fixed;
+    background-color: transparent;
     display: flex;
     align-items: center;
     height: 100%; }
+    .section-hero .jumbotron::before {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: .7; }
+
+.videoContainer {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+  .videoContainer iframe {
+    width: 100%;
+    height: 100%; }
 
 .hero-list {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
   list-style-type: none;
+  margin-left: 20px;
   padding: 0; }
   .hero-list li {
     position: relative;
@@ -7393,7 +7486,7 @@ body {
   position: relative;
   margin-top: -60px;
   padding: 5rem 0;
-  background: url(/images/sectionbg-prove.jpg) no-repeat bottom;
+  background: url(../images/sectionbg-prove.jpg) no-repeat bottom;
   background-size: cover; }
 
 .section-data {
@@ -7429,21 +7522,44 @@ body {
 .section-gallery {
   background: #FF693A; }
 
-.video-content::before {
-  content: '';
-  top: -10px;
-  left: -10px;
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: #FF693A; }
+.slick-slider {
+  width: 100%; }
+
+.big-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .big-gallery div {
+    transition: .3s;
+    text-align: center;
+    object-fit: cover; }
+    .big-gallery div img {
+      width: 100%;
+      height: 100%; }
 
 .video-content h3 {
+  position: relative;
   font-weight: bold; }
+  .video-content h3::before {
+    content: '';
+    top: 5px;
+    left: -30px;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #FF693A; }
 
 .section-signup {
   background: #103D65; }
+
+.form-signup {
+  background: white;
+  color: #103D65;
+  padding: 2rem; }
+  .form-signup h3 {
+    font-weight: bold;
+    font-size: 2rem; }
 
 .footer {
   padding: 5rem;

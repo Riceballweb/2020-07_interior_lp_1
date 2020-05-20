@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
 
+
+
 //compile sass to css
 function style() {
   //1. Find sass file
@@ -13,6 +15,15 @@ function style() {
   //4. String change to all browser
   .pipe(browserSync.stream());
 }
+
+
+ var gulpImagemin = require('gulp-imagemin');
+
+gulp.task('image', function () {
+    gulp.src('images/images-original/**')
+        .pipe(gulpImagemin())
+        .pipe(gulp.dest('images'));
+});
 
 function watch(){
   browserSync.init({
