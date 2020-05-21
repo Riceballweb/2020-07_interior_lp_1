@@ -7319,8 +7319,10 @@ mark,
   .card h3 {
     letter-spacing: 2px; }
 
+html {
+  overflow-x: hidden; }
+
 body {
-  overflow-x: hidden;
   background-color: #0874c2;
   font-family: 'Noto Sans TC', sans-serif;
   color: #041321; }
@@ -7529,13 +7531,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .big-gallery div {
-    transition: .3s;
-    text-align: center;
-    object-fit: cover; }
-    .big-gallery div img {
-      width: 100%;
-      height: 100%; }
+  .big-gallery div img {
+    width: 100%;
+    height: 100%; }
 
 .video-content h3 {
   position: relative;
