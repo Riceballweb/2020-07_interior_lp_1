@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Site</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
     <!-- notice -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
   </head>
@@ -21,7 +22,8 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <span class="bg-white text-primary d-inline-block py-2 px-4 mb-1">業界激推 No.01</span>
-        <h1 class="display-4 font-weight-bold">學室內到「赫綵」<br>三個月保證讓業界搶著要你！</h1>
+        <h1 class="display-3 font-weight-bold">學室內到「赫綵」<br>三個月保證讓業界搶著要你！</h1>
+        <h2>零基礎到就業，讓你從此不缺工作，只挑工作。</h2>
         <ul class="hero-list">
           <li>零基礎學到會</li>
           <li>無學歷要求</li>
@@ -29,6 +31,7 @@
         </ul>
       </div>
     </div>
+
     </section>
 
     <section class="section-question">
@@ -42,11 +45,11 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-          <div class="card-deck card-question text-center mt-4">
+          <div class="card-deck card__question text-center mt-4">
 
             <div class="card">
               <h3 class="font-weight-bold">我要就業</h3>
-              <img style="max-width: 250px" class="mt-n2 mr-2" src="images/svg/test.svg" alt="Card image cap">
+              <img class="mt-n2 mr-2" src="images/svg/test.svg" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title font-weight-bold">室內設計新鮮人</h4>
                 <p class="card-text">想成為室內設計師，但沒有經驗、基本功也不足，到底怎麼開始？</p>
@@ -55,7 +58,7 @@
 
             <div class="card">
               <h3 class="font-weight-bold">我要轉職</h3>
-              <img style="max-width: 250px" class="mt-n2 mr-2" src="images/svg/test.svg" alt="Card image cap">
+              <img class="mt-n2 mr-2" src="images/svg/test.svg" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title font-weight-bold">想要更好的薪資待遇</h4>
                 <p class="card-text">不滿意現在的薪水，想要轉職拿高薪卻沒有方向嗎？</p>
@@ -64,7 +67,7 @@
 
             <div class="card">
               <h3 class="font-weight-bold">我要升職</h3>
-              <img style="max-width: 250px" class="mt-n2 mr-2" src="images/svg/test.svg" alt="Card image cap">
+              <img class="mt-n2 mr-2" src="images/svg/test.svg" alt="Card image cap">
               <div class="card-body">
                 <h4 class="card-title font-weight-bold">精進技能學習新知</h4>
                 <p class="card-text">已經是室內設計工作者，卻覺得自己的經驗及能力很缺乏？</p>
@@ -89,79 +92,102 @@
           </div>
         </div>
 
-        <div class="card-deck card-question text-center mt-4">
+        <div class="card-deck card__answer text-center mt-4">
 
           <div class="card">
-            <h3 class="font-weight-bold">我要就業</h3>
-            <img style="max-width: 250px" class="mt-n2 mr-2" src="images/svg/test.svg" alt="Card image cap">
+            <img class="card__steps" src="/images/svg/step01.svg" alt="">
+            <img class="mt-n2 mr-2" src="images/ans01.jpg" alt="Card image cap">
             <div class="card-body">
-              <h4 class="card-title font-weight-bold">室內設計新鮮人</h4>
-              <p class="card-text">想成為室內設計師，但沒有經驗、基本功也不足，到底怎麼開始？</p>
+              <h3 class="font-weight-bold">軟體速學</h3>
+              <ul>
+                <li>熟悉軟體操作</li>
+                <li>掌握全面知識</li>
+                <li>取得原廠認證結業書</li>
+              </ul>
             </div>
           </div>
 
           <div class="card">
-            <h3 class="font-weight-bold">我要轉職</h3>
-            <img style="max-width: 250px" class="mt-n2 mr-2" src="images/svg/test.svg" alt="Card image cap">
+            <img class="card__steps" src="/images/svg/step01.svg" alt="">
+            <img class="mt-n2 mr-2" src="images/ans02.jpg" alt="Card image cap">
             <div class="card-body">
-              <h4 class="card-title font-weight-bold">想要更好的薪資待遇</h4>
-              <p class="card-text">不滿意現在的薪水，想要轉職拿高薪卻沒有方向嗎？</p>
+              <h3 class="font-weight-bold">工地實務</h3>
+              <ul>
+                <li>工地現場專業術語 </li>
+                <li>直擊工地現場</li>
+                <li>增加實務經驗</li>
+              </ul>
             </div>
           </div>
 
           <div class="card">
-            <h3 class="font-weight-bold">我要升職</h3>
-            <img style="max-width: 250px" class="mt-n2 mr-2" src="images/svg/test.svg" alt="Card image cap">
+            <img class="card__steps" src="/images/svg/step01.svg" alt="">
+            <img class="mt-n2 mr-2" src="images/ans03.jpg" alt="Card image cap">
             <div class="card-body">
-              <h4 class="card-title font-weight-bold">精進技能學習新知</h4>
-              <p class="card-text">已經是室內設計工作者，卻覺得自己的經驗及能力很缺乏？</p>
+              <h3 class="font-weight-bold">考取證照</h3>
+              <ul>
+                <li>室內乙級證照</li>
+                <li>優先錄取、加薪、升職</li>
+                <li>考取率高達87.2%</li>
+              </ul>
             </div>
           </div>
-      </div>
 
+
+        </div>
       </div>
     </section>
 
     <section class="section-timeline">
-      <div class="container text-center">
-        <div class="title-box">
-          <h2><mark>從零基礎到考取證照</mark>，一條龍課程規劃</h2>
-          <h3>百萬室內設計師為不同基礎學員打造課程需求</h3>
+      <div class="container">
+
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="title-box">
+            <h2><mark>從零基礎到考取證照</mark>，一條龍課程規劃</h2>
+            <h3>百萬室內設計師為不同基礎學員打造課程需求</h3>
+          </div>
         </div>
 
         <div class="timeline">
+
           <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
 
             <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
               <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">AutoCAD 設計實務</a>
-                  <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">薪資揭密</a>
-
+                <div class="nav nav-tabs" id="nav-tab-a1" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-home-tab-a1" data-toggle="tab" href="#nav-home-a1" role="tab" aria-controls="nav-home-a1" aria-selected="true">AutoCAD 設計實務</a>
+                  <a class="nav-item nav-link" id="nav-salary-tab-a1" data-toggle="tab" href="#nav-salary-a1" role="tab" aria-controls="nav-salary-a1" aria-selected="false">薪資揭密</a>
                 </div>
               </nav>
-              <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div class="tab-content" id="nav-tabContent-a1">
+                <div class="tab-pane fade show active" id="nav-home-a1" role="tabpanel" aria-labelledby="nav-home-tab-a1">
                   <h3>學會AutoCAD學習事半功倍</h3>
-                  <p>扎穩基礎能力，學界、業界師資，<br>傳授必學知識及軟體操作。</p>
-                  <p>手繪透視圖練習｜綠建材介紹｜裝修法規｜金屬與門窗工程｜拆除與水電工程｜空間實務創作｜木作、燈光、粉刷工程</p>
+                  <ul>
+                    <li>手繪透視圖練習</li>
+                    <li>綠建材介紹</li>
+                    <li>裝修法規</li>
+                    <li>金屬與門窗工程</li>
+                    <li>拆除與水電工程</li>
+                    <li>空間實務創作</li>
+                    <li>木作、燈光、粉刷工程</li>
+                    <!-- <p>手繪透視圖練習｜綠建材介紹｜裝修法規｜金屬與門窗工程｜拆除與水電工程｜空間實務創作｜木作、燈光、粉刷工程</p> -->
+                  </ul>
+
                   <!-- <img src="images/png/autocad-logo.png" alt=""> -->
                 </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="tab-pane fade" id="nav-salary-a1" role="tabpanel" aria-labelledby="nav-salary-tab-a1">
                   <h3>邁向室內設計師的第一步學會Auto CAD</h3>
-                  <ul>
-                    <li>AutoCAD 繪圖一張</li>
-                    <li>兩房、兩廳、一衛</li>
-                    <li>室內設計師</li>
-                    <span>面試錄取率75%</span>
-
-
+                  <ul class="tab-pane__list">
+                    <li>AutoCAD 繪圖一張<span class="tab-pane__list__price">$ 2,000起</span></li>
+                    <li>兩房、兩廳、一衛<span class="tab-pane__list__price">$ 10,000起</span></li>
+                    <li>室內設計師<span class="tab-pane__list__price">$ 32,000起</span></li>
+                    <span class="tab-pane__postscript">面試錄取率75%</span>
                   </ul>
                 </div>
               </div>
             </div>
 
-            <div class="col-2 col-sm-1 px-md-3 order-2 timeline-image text-md-center">
+            <div class="col-2 col-sm-1 order-2 timeline-image text-md-center">
               <div>
                 <span>level</span>
                 <br>
@@ -169,10 +195,110 @@
               </div>
             </div>
             <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
-              <img class="w-100" src="https://placekitten.com/g/400/300" alt="">
+
+              <div class="timeline__slider lazy">
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA1.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA2.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA3.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA5.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA6.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA7.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+              </div>
             </div>
           </div>
 
+          <div class="row no-gutters justify-content-end justify-content-md-around align-items-start  timeline-nodes">
+
+            <div class="col-10 col-md-5 order-3 order-md-1 timeline-content">
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab-a2" role="tablist">
+                  <a class="nav-item nav-link active" id="nav-home-tab-a2" data-toggle="tab" href="#nav-home-a2" role="tab" aria-controls="nav-home-a2" aria-selected="true">室內設計實務</a>
+                  <a class="nav-item nav-link" id="nav-salary-tab-a2" data-toggle="tab" href="#nav-salary-a2" role="tab" aria-controls="nav-salary-a2" aria-selected="false">薪資揭密</a>
+                </div>
+              </nav>
+              <div class="tab-content" id="nav-tabContent-a2">
+                <div class="tab-pane fade show active" id="nav-home-a2" role="tabpanel" aria-labelledby="nav-home-tab-a2">
+                  <h3>實戰教學，提升學習效率<br>獨家打造實習工廠</h3>
+                  <p>模擬接案｜實際丈量｜認識建築材質｜摸透業界眉角｜水電配置圖｜工程實務｜3D建模基礎概念</p>
+                  <!-- <img src="images/png/autocad-logo.png" alt=""> -->
+                </div>
+                <div class="tab-pane fade" id="nav-salary-a2" role="tabpanel" aria-labelledby="nav-salary-tab-a2">
+                  <h3>邁向室內設計師的第一步學會Auto CAD</h3>
+                  <ul class="tab-pane__list">
+                    <li>AutoCAD 繪圖一張<span class="tab-pane__list__price">$ 2,000起</span></li>
+                    <li>兩房、兩廳、一衛<span class="tab-pane__list__price">$ 10,000起</span></li>
+                    <li>室內設計師<span class="tab-pane__list__price">$ 32,000起</span></li>
+                    <span class="tab-pane__postscript">面試錄取率75%</span>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-2 col-sm-1 order-2 timeline-image text-md-center">
+              <div>
+                <span>level</span>
+                <br>
+                <span class="timeline-image__number">02</span>
+              </div>
+            </div>
+            <div class="col-10 col-md-5 order-1 order-md-3 py-3 timeline-date">
+
+              <div class="timeline__slider lazy">
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA1.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA2.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA3.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA5.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA6.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+
+                <figure class="timeline__slider__figure">
+                  <img data-lazy="images/timelineA7.jpg"/>
+                  <figcaption>室內設計概論、空間構成原理</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
 
 
         </div>
@@ -277,7 +403,7 @@
                 <h4>2019 取得<br><mark>
                   乙級建築物室內裝修工程管理技術士</mark></h4>
               </div>
-            </div>t
+            </div>
 
 
 
@@ -287,16 +413,19 @@
       </div>
     </section>
 
-    <section class="section-data text-center">
+    <section class="section-data">
       <div class="container">
-        <div class="title-box">
-          <h2>全副武裝，不怕沒人要</h2>
-          <h3>室內設計產業永不衰退，人力銀行顯示超過1.3萬個職缺，大家搶著要你！</h3>
+        <div class="row d-flex justify-content-center">
+          <div class="title-box">
+            <h2>全副武裝，不怕沒人要</h2>
+            <h3>室內設計產業永不衰退，人力銀行顯示超過1.3萬個職缺，大家搶著要你！</h3>
+          </div>
+
         </div>
 
         <div class="row">
           <div class="col-6">
-            <h3><mark>超乎你想像的高薪解密</mark></h3>
+            <h3><mark class="text-primary">超乎你想像的高薪解密</mark></h3>
             <p class="text-left">室內設計師薪資計算方式是底薪+提成，設計費行情普遍落在每坪6,000~20,000元，一個能夠獨立完成設計方案的室內設計師，提成的金額為總工程費的5%~8%，越資深、作品越多、知名度越高，薪資當然也高，所以接單越多、設計面積越大，收入越高。</p>
           </div>
           <div class="col-6">
@@ -353,29 +482,26 @@
 
     <section class="section-gallery">
       <div class="container-fluid">
-        <div class="title-box">
-          <h2>成功晉升室內設計師，他們都做到了！</h2>
-          <h3>不只拿高薪，為你量身定製職業規劃，拉開你與普通設計師的距離。</h3>
+        <div class="row d-flex justify-content-center">
+          <div class="title-box">
+            <h2>成功晉升室內設計師，他們都做到了！</h2>
+            <h3>不只拿高薪，為你量身定製職業規劃，拉開你與普通設計師的距離。</h3>
+          </div>
         </div>
 
         <div class="big-gallery">
           <div class="">
             <img src="https://picsum.photos/400/300" alt="">
           </div>
-
           <div class="">
-            <img src="https://picsum.photos/400/300" alt="">
+            <img src="https://picsum.photos/401/300" alt="">
           </div>
           <div class="">
-            <img src="https://picsum.photos/400/300" alt="">
+            <img src="https://picsum.photos/402/300" alt="">
           </div>
           <div class="">
-            <img src="https://picsum.photos/400/300" alt="">
+            <img src="https://picsum.photos/403/300" alt="">
           </div>
-
-
-
-
         </div>
 
       </div>
@@ -419,20 +545,38 @@
     <section class="section-signup">
       <div class="container">
         <div class="row">
-          <div class="col">
+          <div class="col text-center">
 
             <div class="title-box">
-              <h2>萬元學習好禮送給你</h2>
-              <h3>打破業界學習模式，專人為你量身打造課程</h3>
+              <h2 class="display-4">萬元學習大禮包</h2>
+              <h3>限時優惠，數量有限</h3>
+              <span class="joined-box">目前已經有73人報名</span>
             </div>
 
-            <div class="card-deck card-question text-center mt-4">
+
+            <div class="card-deck card__question text-center mt-4">
 
               <div class="card">
-                <img class="card-img-top" src="https://placekitten.com/g/100/100" alt="Card image cap">
+                <img class="card-img-top" src="images/svg/test.svg" alt="Card image cap">
                 <div class="card-body">
-                  <h4 class="card-title font-weight-bold">室內設計新鮮人</h4>
-                  <p class="card-text">想成為室內設計師，但沒有經驗、基本功也不足，到底怎麼開始？</p>
+                  <h4 class="card-title font-weight-bold">新鮮人必學</h4>
+                  <p class="card-text">線上設計180堂</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img class="card-img-top" src="images/svg/test.svg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">獨家講座</h4>
+                  <p class="card-text">室內設計・百萬講師</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <img class="card-img-top" src="images/svg/test.svg" alt="Card image cap">
+                <div class="card-body">
+                  <h4 class="card-title font-weight-bold">報名再送</h4>
+                  <p class="card-text">sketchup 原廠軟體+雷射測距儀</p>
                 </div>
               </div>
 
@@ -521,13 +665,44 @@
     </section>
 
 
-    <section class="section-rate text-center">
-      <div class="container">
-        <div class="title-box">
-          <h2>好不好學員說的算！<br>學員滿意度高達 91.3％</h2>
+    <section class="section-feedback">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+          <div class="title-box">
+            <h2>好不好學員說的算！<br>學員滿意度高達 91.3％</h2>
+          </div>
         </div>
 
-        <div class="debug-block"></div>
+        <div class="feedback-card">
+          <div class="feedback-card__item">
+            <img class="float-left" src="https://placekitten.com/g/100/100">
+            <h3>AutoCad<br> 設計實務班</h3>
+            <h4>板橋 胡O祖</h4>
+            <hr>
+            <p>開心能夠遇到解說細膩且熱心服務的老師，環境優良和配備完整，老師講解條理分明，有學習上的困難皆會給予適當的協助且指引操作，上課的方式是用輕快的節奏進行，而不會單調死板，非常感謝老師讓我對室內設計認知更進一步。 </p>
+            <time>2019.01.20</time>
+          </div>
+
+          <div class="feedback-card__item">
+            <img class="float-left" src="https://placekitten.com/g/100/100">
+            <h3>AutoCad<br> 設計實務班</h3>
+            <h4>板橋 胡O祖</h4>
+            <hr>
+            <p>開心能夠遇到解說細膩且熱心服務的老師，環境優良和配備完整，老師講解條理分明，有學習上的困難皆會給予適當的協助且指引操作，上課的方式是用輕快的節奏進行，而不會單調死板，非常感謝老師讓我對室內設計認知更進一步。 </p>
+            <time>2019.01.20</time>
+          </div>
+
+          <div class="feedback-card__item">
+            <img class="float-left" src="https://placekitten.com/g/100/100">
+            <h3>AutoCad<br> 設計實務班</h3>
+            <h4>板橋 胡O祖</h4>
+            <hr>
+            <p>開心能夠遇到解說細膩且熱心服務的老師，環境優良和配備完整，老師講解條理分明，有學習上的困難皆會給予適當的協助且指引操作，上課的方式是用輕快的節奏進行，而不會單調死板，非常感謝老師讓我對室內設計認知更進一步。 </p>
+            <time>2019.01.20</time>
+          </div>
+
+        </div>
+
 
       </div>
     </section>
@@ -540,7 +715,7 @@
           <span>Copyright ©Appedu. All rights reserved.
             主辦單位保留活動與課程大綱異動之權利，最新資訊以活動網站為主。</span>
           </div>
-        
+
       </div>
     </footer>
 
@@ -554,7 +729,7 @@
     <!-- Jquery-migrate -->
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-    <!-- Slick.js -->
+    <!-- slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
 
     <!-- Bootstrap -->
@@ -562,8 +737,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Moduel -->
-
     <script type="text/javascript" src="./js/script.js"></script>
+
+    <!-- lightbox -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 
 

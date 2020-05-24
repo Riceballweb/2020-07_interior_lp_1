@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/* Cool infinite background scrolling animation.
- * Twitter: @kootoopas */
-/* Exo thin font from Google. */
-@import url(https://fonts.googleapis.com/css?family=Exo:100);
-/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
 /* Animations */
 @-webkit-keyframes bg-scrolling-reverse {
   100% {
@@ -39,10 +34,6 @@
 
 /* Main styles */
 body {
-  margin-top: 13.5rem;
-  color: #999;
-  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-  text-align: center;
   /* img size is 50x50 */
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
   -webkit-animation: bg-scrolling-reverse 0.92s infinite;
@@ -7227,11 +7218,12 @@ a.text-dark:hover, a.text-dark:focus {
 
 .title-box {
   position: relative;
-  background: white;
   padding: 2rem;
   margin: 4rem 0;
   display: inline-block; }
   .title-box::before {
+    z-index: -1;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     position: absolute;
     top: 1px;
     bottom: 1px;
@@ -7243,6 +7235,8 @@ a.text-dark:hover, a.text-dark:focus {
     transform: rotate(-1deg);
     opacity: .5; }
   .title-box::after {
+    z-index: -1;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     position: absolute;
     top: 1px;
     bottom: 1px;
@@ -7253,11 +7247,16 @@ a.text-dark:hover, a.text-dark:focus {
     content: "";
     transform: rotate(0.5deg);
     opacity: .9; }
-  .title-box h2 {
-    font-weight: bold;
-    color: #103D65; }
+  .title-box h2, .title-box h3 {
+    font-weight: bold; }
   .title-box h3 {
     font-size: 1.3rem; }
+
+.joined-box {
+  display: inline-block;
+  border: 2px solid #EFEEF0;
+  padding: .4rem 1rem;
+  margin: .2rem 0; }
 
 .text-block {
   margin-right: 1rem;
@@ -7293,17 +7292,29 @@ a.text-dark:hover, a.text-dark:focus {
 .namecard__item__content {
   text-align: left;
   padding: 2rem; }
+  .namecard__item__content span {
+    display: inline-block;
+    color: gray;
+    margin-bottom: 1rem; }
+  .namecard__item__content h3 {
+    font-weight: bold; }
+  .namecard__item__content h4 {
+    font-size: 1rem; }
 
-span {
-  display: inline-block;
-  color: gray;
-  margin-bottom: 1rem; }
-
-h3 {
-  font-weight: bold; }
-
-h4 {
-  font-size: 1rem; }
+.feedback-card__item {
+  max-width: 400px;
+  background: white;
+  border: 2px solid #103D65;
+  padding: 2rem;
+  margin: 0 2rem;
+  border-radius: 5px; }
+  .feedback-card__item img {
+    border-radius: 50%;
+    margin-right: 1rem; }
+  .feedback-card__item h3 {
+    font-weight: bold; }
+  .feedback-card__item h4 {
+    font-size: 1.2rem; }
 
 mark,
 .mark {
@@ -7314,8 +7325,11 @@ mark,
 
 .card {
   margin: 0 2rem;
+  text-align: center;
   background: transparent;
   border: 0; }
+  .card img {
+    width: 100%; }
   .card h3 {
     letter-spacing: 2px; }
 
@@ -7323,9 +7337,9 @@ html {
   overflow-x: hidden; }
 
 body {
-  background-color: #0874c2;
   font-family: 'Noto Sans TC', sans-serif;
-  color: #041321; }
+  color: #103D65;
+  line-height: 1.8; }
 
 .section-hero {
   margin: 0;
@@ -7383,15 +7397,49 @@ body {
 .section-question {
   margin-top: -5rem;
   margin-bottom: 5rem; }
+  .section-question .title-box::before {
+    display: none; }
+  .section-question .title-box::after {
+    display: none; }
 
-.card-question .card {
+.card__question .card {
   max-width: 300px; }
+  .card__question .card h4 {
+    letter-spacing: 1px;
+    font-size: 1.3rem; }
+
+.card__answer {
+  width: 100%; }
+  .card__answer h3 {
+    padding: .5rem 0;
+    border-bottom: 2px solid #103D65; }
+  .card__answer .card {
+    border: 0.2rem solid #103D65;
+    background: white; }
+    .card__answer .card ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: left; }
+    .card__answer .card li {
+      font-size: 1.3rem;
+      text-align: center; }
+  .card__answer .card__steps {
+    z-index: 2;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    max-width: 150px;
+    transform: rotate(-10deg); }
+    .card__answer .card__steps h4 {
+      display: inline-block;
+      border-bottom: 2px solid red; }
 
 .timeline {
   padding: 50px 0;
   position: relative; }
 
 .timeline-nodes {
+  margin: 5rem 0;
   position: relative; }
   .timeline-nodes:nth-child(even) {
     flex-direction: row-reverse; }
@@ -7419,19 +7467,50 @@ body {
   position: relative;
   border-radius: 0 0 10px 10px; }
   .timeline-content .tab-content {
+    position: relative;
+    z-index: 2;
     border: 3px solid #103D65;
     background: white;
     padding: 2rem 1rem; }
-  .timeline-content .nav-tabs {
-    border: 0; }
-  .timeline-content .nav-link {
-    letter-spacing: 2px;
-    background: white; }
-  .timeline-content .nav-tabs .nav-link.active {
-    background: #103D65;
-    border: 0;
-    color: #EFEEF0;
-    font-weight: bold; }
+
+.nav-tabs {
+  z-index: 1;
+  border: 0;
+  top: -40px;
+  position: absolute; }
+
+.nav-link {
+  letter-spacing: 2px;
+  background: white; }
+
+.nav-tabs .nav-link {
+  opacity: .8; }
+
+.nav-tabs .nav-link.active {
+  background: #103D65;
+  border: 0;
+  color: #EFEEF0;
+  opacity: 1;
+  font-weight: bold; }
+
+.tab-pane__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .tab-pane__list li {
+    border: 2px solid #103D65;
+    margin: 1.3rem 0;
+    padding: .5rem;
+    transition: .3s; }
+    .tab-pane__list li:hover {
+      background: #103D65;
+      color: white; }
+
+.tab-pane__list__price {
+  float: right; }
+
+.tab-pane__postscript {
+  float: right; }
 
 .timeline-nodes:nth-child(odd) h3, .timeline-nodes:nth-child(odd) p {
   text-align: left; }
@@ -7463,6 +7542,7 @@ body {
   border-bottom: 10px solid transparent; }
 
 .timeline-image {
+  color: #EFEEF0;
   position: relative;
   z-index: 100; }
   .timeline-image::before {
@@ -7475,14 +7555,34 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #FF693A;
     z-index: 1; }
   .timeline-image div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     z-index: 100; }
   .timeline-image .timeline-image__number {
     font-size: 2rem;
     font-weight: bold; }
+
+.timeline__slider {
+  max-height: 300px;
+  object-fit: cover; }
+  .timeline__slider img {
+    width: 100%; }
+
+.timeline__slider__figure {
+  padding: 4px;
+  color: #EFEEF0;
+  text-align: center;
+  letter-spacing: 3px;
+  background: #103D65;
+  border-radius: 5px; }
+  .timeline__slider__figure figcaption {
+    margin: .3rem 0; }
 
 .section-prove {
   position: relative;
@@ -7491,8 +7591,15 @@ body {
   background: url(../images/sectionbg-prove.jpg) no-repeat bottom;
   background-size: cover; }
 
-.section-data {
-  background: url(../images/sectionbg-counter.jpg) no-repeat top;
+.section-data::before {
+  content: '';
+  z-index: -1;
+  opacity: .2;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/timelineA6.jpg) no-repeat top;
   background-size: contain; }
 
 .card-counter .card {
@@ -7527,13 +7634,13 @@ body {
 .slick-slider {
   width: 100%; }
 
-.big-gallery {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .big-gallery div img {
-    width: 100%;
-    height: 100%; }
+.big-gallery img {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto; }
+
+.big-gallery .slick-center {
+  transform: scale(1.3); }
 
 .video-content h3 {
   position: relative;
@@ -7549,7 +7656,13 @@ body {
     background: #FF693A; }
 
 .section-signup {
-  background: #103D65; }
+  background: #103D65;
+  color: #EFEEF0; }
+  .section-signup .title-box {
+    margin: 1rem;
+    padding: 0; }
+  .section-signup .title-box h2, .section-signup .title-box h3 {
+    color: #EFEEF0; }
 
 .form-signup {
   background: white;
@@ -7616,8 +7729,8 @@ body {
   .timeline-nodes:nth-child(even) .timeline-date {
     text-align: left; }
   .timeline-image::before {
-    width: 65px;
-    height: 65px; } }
+    min-width: 100px;
+    min-height: 100px; } }
 
 /*extra small device style */
 @media (max-width: 575px) {

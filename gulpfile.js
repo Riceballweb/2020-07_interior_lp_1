@@ -20,7 +20,7 @@ function style() {
  var gulpImagemin = require('gulp-imagemin');
 
 gulp.task('image', function () {
-    gulp.src('images/images-original/**')
+    gulp.src('images-original/**')
         .pipe(gulpImagemin())
         .pipe(gulp.dest('images'));
 });

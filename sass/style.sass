@@ -1,86 +1,17 @@
-/* Cool infinite background scrolling animation.
- * Twitter: @kootoopas
-/* Exo thin font from Google.
-@import url(https://fonts.googleapis.com/css?family=Exo:100)
-
-/* Background data (Original source: https://subtlepatterns.com/grid-me/)
-/* Animations
-@-webkit-keyframes bg-scrolling-reverse
-  100%
-    background-position: 50px 50px
-
-@-moz-keyframes bg-scrolling-reverse
-  100%
-    background-position: 50px 50px
-
-@-o-keyframes bg-scrolling-reverse
-  100%
-    background-position: 50px 50px
-
-@keyframes bg-scrolling-reverse
-  100%
-    background-position: 50px 50px
-
-@-webkit-keyframes bg-scrolling
-  0%
-    background-position: 50px 50px
-
-@-moz-keyframes bg-scrolling
-  0%
-    background-position: 50px 50px
-
-@-o-keyframes bg-scrolling
-  0%
-    background-position: 50px 50px
-
-@keyframes bg-scrolling
-  0%
-    background-position: 50px 50px
-
-/* Main styles
-
-body
-  margin-top: 13.5rem
-  color: #999
-  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif
-  text-align: center
-
-  /* img size is 50x50
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0
-  -webkit-animation: bg-scrolling-reverse 0.92s infinite
-
-  /* Safari 4+
-  -moz-animation: bg-scrolling-reverse 0.92s infinite
-
-  /* Fx 5+
-  -o-animation: bg-scrolling-reverse 0.92s infinite
-
-  /* Opera 12+
-  animation: bg-scrolling-reverse 0.92s infinite
-
-  /* IE 10+
-  -webkit-animation-timing-function: linear
-  -moz-animation-timing-function: linear
-  -o-animation-timing-function: linear
-  animation-timing-function: linear
-
-
-//Import vars
+@charset "UTF-8"
+@import "sass/movingBg"
 @import "sass/variable"
-//Import Bootstrap
 @import "node_modules/bootstrap/scss/bootstrap"
-
-//Import modules
 @import "sass/modules"
 
 html
   overflow-x: hidden
 
 body
-  background-color: #0874c2
-
   font-family: 'Noto Sans TC', sans-serif
-  color: $primary-dark
+  color: $primary
+  line-height: 1.8
+
 
 .section-hero
   margin: 0
@@ -144,10 +75,56 @@ body
 .section-question
   margin-top: -5rem
   margin-bottom: 5rem
+  .title-box
 
-.card-question
+    &::before
+      display: none
+
+    &::after
+      display: none
+
+.card__question
   .card
     max-width: 300px
+
+    h4
+      letter-spacing: 1px
+      font-size: 1.3rem
+
+.card__answer
+  width: 100%
+
+  h3
+    padding: .5rem 0
+    border-bottom: 2px solid $primary
+
+
+  .card
+    border: .2rem solid $primary
+    background: white
+
+    ul
+      list-style-type: none
+      padding: 0
+      text-align: left
+
+    li
+      font-size: 1.3rem
+      text-align: center
+
+  .card__steps
+    z-index: 2
+    position: absolute
+    top: -10%
+    left: -10%
+    max-width: 150px
+    transform: rotate(-10deg)
+
+    h4
+      display: inline-block
+      border-bottom: 2px solid red
+
+
 
 .section-timeline
 
@@ -156,6 +133,7 @@ body
   position: relative
 
 .timeline-nodes
+  margin: 5rem 0
   position: relative
 
   &:nth-child(even)
@@ -163,6 +141,7 @@ body
 
 
 .timeline
+
   h3, p
     color: $primary
 
@@ -189,23 +168,53 @@ body
 
 
   .tab-content
+    position: relative
+    z-index: 2
     border: 3px solid $primary
     background: white
     padding: 2rem 1rem
 
+.nav-tabs
+  z-index: 1
+  border: 0
+  top: -40px
+  position: absolute
 
-  .nav-tabs
-    border: 0
+.nav-link
+  letter-spacing: 2px
+  background: white
 
-  .nav-link
-    letter-spacing: 2px
-    background: white
+.nav-tabs .nav-link
+  opacity: .8
 
-  .nav-tabs .nav-link.active
-    background: $primary
-    border: 0
-    color: $light
-    font-weight: bold
+.nav-tabs .nav-link.active
+  background: $primary
+  border: 0
+  color: $light
+  opacity: 1
+  font-weight: bold
+
+.tab-pane__list
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+  li
+    border: 2px solid $primary
+    margin: 1.3rem 0
+    padding: .5rem
+    transition: .3s
+
+    &:hover
+      background: $primary
+      color: white
+
+.tab-pane__list__price
+  float: right
+
+.tab-pane__postscript
+  float: right
+
 
 .timeline-nodes
   &:nth-child(odd)
@@ -239,7 +248,7 @@ body
     border-bottom: 10px solid transparent
 
 .timeline-image
-
+  color: $light
   position: relative
   z-index: 100
 
@@ -254,16 +263,38 @@ body
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
-    background-color: #fff
+    background-color: $sub
     z-index: 1
 
   div
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
     position: relative
     z-index: 100
 
   .timeline-image__number
     font-size: 2rem
     font-weight: bold
+
+.timeline__slider
+  max-height: 300px
+  object-fit: cover
+
+  img
+    width: 100%
+
+.timeline__slider__figure
+  padding: 4px
+  color: $light
+  text-align: center
+  letter-spacing: 3px
+  background: $primary
+  border-radius: 5px
+
+  figcaption
+    margin: .3rem 0
 
 .section-prove
   position: relative
@@ -273,8 +304,17 @@ body
   background-size: cover
 
 .section-data
-  background: url(../images/sectionbg-counter.jpg) no-repeat top
-  background-size: contain
+  &::before
+    content: ''
+    z-index: -1
+    opacity: .2
+    position: absolute
+    display: block
+    width: 100%
+    height: 100%
+    background: url(../images/timelineA6.jpg) no-repeat top
+    background-size: contain
+
 
 .section-counter
 
@@ -313,14 +353,17 @@ body
 
 
 .big-gallery
-  display: flex
-  justify-content: center
-  align-items: center
-    img
-      width: 100%
-      height: 100%
+
+  div
+
+
+  img
+    width: 80%
+    height: 100%
+    margin: 0 auto
 
   .slick-center
+    transform: scale(1.3)
 
 
 
@@ -344,6 +387,15 @@ body
 
 .section-signup
   background: $primary
+  color: $light
+
+  .title-box
+    margin: 1rem
+    padding: 0
+
+  .title-box h2, .title-box h3
+    color: $light
+
 
 .form-signup
   background: white
@@ -364,7 +416,6 @@ body
   min-width: 300px
 
 /*small device style
-
 @media (max-width: 767px)
   .timeline-nodes
     &:nth-child(odd)
@@ -428,8 +479,8 @@ body
         text-align: left
 
   .timeline-image::before
-    width: 65px
-    height: 65px
+    min-width: 100px
+    min-height: 100px
 
 /*extra small device style
 @media (max-width: 575px)

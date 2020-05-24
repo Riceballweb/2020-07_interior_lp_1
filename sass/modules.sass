@@ -27,13 +27,15 @@
 
 // contain headings
 .title-box
+
   position: relative
-  background: white
   padding: 2rem
   margin: 4rem 0
   display: inline-block
 
   &::before
+    z-index: -1
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px
     position: absolute
     top: 1px
     bottom: 1px
@@ -46,6 +48,8 @@
     opacity: .5
 
   &::after
+    z-index: -1
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px
     position: absolute
     top: 1px
     bottom: 1px
@@ -57,15 +61,17 @@
     transform: rotate(.5deg)
     opacity: .9
 
-
-
-
-  h2
+  h2, h3
     font-weight: bold
-    color: $primary
 
   h3
     font-size: 1.3rem
+
+.joined-box
+  display: inline-block
+  border: 2px solid $light
+  padding: .4rem 1rem
+  margin: .2rem 0
 
 // Big textbox before heading
 .text-block
@@ -87,7 +93,6 @@
     transform: translate(-50%, -50%)
 
 // namecard
-
 .namecard
   .slick-list
     overflow: inherit
@@ -106,19 +111,42 @@
     max-height: 250px
 
 .namecard__item__content
+
   text-align: left
   padding: 2rem
 
-span
-  display: inline-block
-  color: gray
-  margin-bottom: 1rem
+  span
+    display: inline-block
+    color: gray
+    margin-bottom: 1rem
 
-h3
-  font-weight: bold
+  h3
+    font-weight: bold
 
-h4
-  font-size: 1rem
+  h4
+    font-size: 1rem
+
+.feedback-card
+
+.feedback-card__item
+  max-width: 400px
+  background: white
+  border: 2px solid $primary
+  padding: 2rem
+  margin: 0 2rem
+  border-radius: $border-radius
+
+  img
+    border-radius: 50%
+    margin-right: 1rem
+
+  h3
+    font-weight: bold
+
+  h4
+    font-size: 1.2rem
+
+
 
 //
 // Bootstrap overwrite
@@ -133,13 +161,14 @@ mark, .mark
 
 
 // card
-.cards
-
 .card
   margin: 0 2rem
+  text-align: center
   background: transparent
   border: 0
 
+  img
+    width: 100%
 
   h3
     letter-spacing: 2px
