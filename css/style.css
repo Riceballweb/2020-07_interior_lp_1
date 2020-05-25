@@ -7603,16 +7603,21 @@ body {
   background: url(../images/sectionbg-prove.jpg) no-repeat bottom;
   background-size: cover; }
 
-.section-data::before {
-  content: '';
-  z-index: -1;
-  opacity: .2;
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url(../images/timelineA6.jpg) no-repeat top;
-  background-size: contain; }
+.section-data {
+  padding: 5rem 0; }
+  .section-data::before {
+    content: '';
+    z-index: -1;
+    opacity: .2;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/timelineA6.jpg) no-repeat top;
+    background-size: contain; }
+
+.section-counter {
+  padding: 5rem 0; }
 
 .card-counter .card {
   background: white;
@@ -7640,7 +7645,7 @@ body {
 .card-counter small {
   font-size: 1.2rem; }
 
-.section-gallery {
+.section-gallery .container-fluid, .section-gallery .container-sm, .section-gallery .container-md, .section-gallery .container-lg, .section-gallery .container-xl {
   background: #FF693A; }
 
 .slick-slider {
@@ -7653,35 +7658,6 @@ body {
 
 .big-gallery .slick-center {
   transform: scale(1.3); }
-
-.gallery-title {
-  font-size: 36px;
-  color: #42B32F;
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 70px; }
-  .gallery-title:after {
-    content: "";
-    position: absolute;
-    width: 7.5%;
-    left: 46.5%;
-    height: 45px;
-    border-bottom: 1px solid #5e5e5e; }
-
-.filter-button {
-  font-size: 18px;
-  border: 1px solid #42B32F;
-  border-radius: 5px;
-  text-align: center;
-  color: #42B32F;
-  margin-bottom: 30px; }
-  .filter-button:hover {
-    font-size: 18px;
-    border: 1px solid #42B32F;
-    border-radius: 5px;
-    text-align: center;
-    color: #ffffff;
-    background-color: #42B32F; }
 
 .btn-default:active .filter-button:active {
   background-color: #42B32F;
@@ -7797,3 +7773,11 @@ body {
     .timeline-image::before {
       width: 60px;
       height: 60px; } }
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1px; } }
+
+@media (max-width: 576px) {
+  body {
+    font-size: 12px; } }

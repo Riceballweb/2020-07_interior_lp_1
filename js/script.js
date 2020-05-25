@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
 
-  $(".filter-button").click(function(){
+  $(".gallery-filter__btn").click(function(){
       var value = $(this).attr('data-filter');
 
       if(value == "all")
@@ -26,16 +26,6 @@ $(this).addClass("active");
 
 
 
-  $('[data-fancybox="images"]').fancybox({
-      afterLoad : function(instance, current) {
-          var pixelRatio = window.devicePixelRatio || 1;
-
-          if ( pixelRatio > 1.5 ) {
-              current.width  = current.width  / pixelRatio;
-              current.height = current.height / pixelRatio;
-          }
-      }
-  });
 
   // Namecard
   $('.namecard').slick({
