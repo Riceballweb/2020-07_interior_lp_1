@@ -1,6 +1,7 @@
 $( document ).ready(function() {
-
-
+//
+//  Gallery
+//
   $(".gallery-filter__btn").click(function(){
       var value = $(this).attr('data-filter');
 
@@ -34,7 +35,8 @@ $(this).addClass("active");
    infinite: true,
    speed: 300,
    slidesToShow: 1,
-   variableWidth: true
+   variableWidth: true,
+   centerMode: true
   });
 
   // BigGallery
@@ -53,7 +55,7 @@ $(this).addClass("active");
           arrows: false,
           centerMode: true,
           centerPadding: '40px',
-          slidesToShow: 3
+          slidesToShow: 1
         }
       },
       {

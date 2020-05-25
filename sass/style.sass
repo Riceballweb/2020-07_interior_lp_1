@@ -50,7 +50,7 @@ body
 
 
 .hero-list
-  font-size: 1.3rem
+  font-size: 1.1rem
   letter-spacing: 2px
   list-style-type: none
   margin-left: 20px
@@ -317,7 +317,7 @@ body
   background-size: cover
 
 .section-data
-  padding: 5rem 0
+  padding-top: 5rem
 
   &::before
     content: ''
@@ -366,6 +366,15 @@ body
   .container-fluid
     background: $sub
 
+  .title-box
+    margin: 0
+    color: $light
+
+    &::before
+      display: none
+    &::after
+      display: none
+
 .slick-slider
   width: 100%
 
@@ -397,7 +406,6 @@ body
 
 .section-video
 
-
 .video-content
   h3
     position: relative
@@ -412,6 +420,26 @@ body
       width: 20px
       height: 20px
       background: $sub
+
+.video-lightbox
+  display: inline-block
+  width: 100%
+  height: 100%
+  position: relative
+
+.video-lightbox__thumbnail
+  max-height: 300px
+  width: 100%
+  object-fit: cover
+
+.video-lightbox__playbutton
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  max-width: 300px
+
+
 
 .section-signup
   background: $primary
@@ -526,12 +554,3 @@ body
     &::before
       width: 60px
       height: 60px
-
-@media (max-width: $breakpoint-md)
-  body
-    font-size: 1px
-
-
-@media (max-width: $breakpoint-sm)
-  body
-    font-size: 12px
