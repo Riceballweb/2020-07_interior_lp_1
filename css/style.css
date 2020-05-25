@@ -7275,7 +7275,7 @@ a.text-dark:hover, a.text-dark:focus {
     transform: translate(-50%, -50%); }
 
 .namecard .slick-list {
-  overflow: inherit; }
+  overflow-x: hidden; }
 
 .namecard div {
   margin: 0 2rem; }
@@ -7283,7 +7283,7 @@ a.text-dark:hover, a.text-dark:focus {
 .namecard__item {
   overflow: hidden;
   background: white;
-  min-width: 650px;
+  min-width: 450px;
   border-radius: 5px; }
   .namecard__item img {
     max-height: 250px; }
