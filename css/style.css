@@ -7291,7 +7291,7 @@ a.text-dark:hover, a.text-dark:focus {
 .namecard__item {
   overflow: hidden;
   background: white;
-  min-width: 450px;
+  min-width: 550px;
   border-radius: 5px; }
   .namecard__item img {
     max-height: 250px; }
@@ -7456,11 +7456,12 @@ body {
     letter-spacing: 1px;
     font-size: 1.3rem; }
 
-.section-answer .title-box::before {
-  display: none; }
-
-.section-answer .title-box::after {
-  display: none; }
+.section-answer {
+  padding-bottom: 5rem; }
+  .section-answer .title-box::before {
+    display: none; }
+  .section-answer .title-box::after {
+    display: none; }
 
 .card__answer {
   width: 100%; }
@@ -7656,20 +7657,19 @@ body {
   margin-top: -60px;
   padding: 5rem 0;
   background: url(../images/sectionbg-prove.jpg) no-repeat bottom;
-  background-size: namecardcover; }
+  background-size: cover; }
 
 .section-data {
-  padding-top: 5rem;
   position: relative; }
   .section-data::before {
     content: '';
-    z-index: -1;
-    opacity: .2;
     position: absolute;
-    display: block;
-    top: -50%;
+    z-index: -1;
     width: 100%;
-    background: url(../images/timelineA6.jpg) no-repeat top; }
+    height: 100%;
+    background: url(../images/timeline/timelineA6.jpg) no-repeat top;
+    background-attachment: fixed;
+    opacity: .1; }
 
 .section-counter {
   padding: 5rem 0; }
@@ -7730,7 +7730,42 @@ body {
   width: 100%; }
 
 .gallery_product {
-  margin-bottom: 30px; }
+  position: relative;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+  padding: .5rem; }
+  .gallery_product::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .2;
+    transition: .3s; }
+  .gallery_product:hover::before {
+    opacity: .5; }
+  .gallery_product:hover .gallery_product__content {
+    opacity: 1; }
+  .gallery_product img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: .3s; }
+
+.interior {
+  display: none; }
+
+.gallery_product__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #EFEEF0;
+  opacity: 0;
+  transition: .3s; }
 
 .video-content h3 {
   position: relative;

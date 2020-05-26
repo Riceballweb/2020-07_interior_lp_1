@@ -1,30 +1,14 @@
 $( document ).ready(function() {
-//
-//  Back to top btn
-//
 
-$(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-            $('#back-to-top').fadeIn();
-        } else {
-            $('#back-to-top').fadeOut();
-        }
-    });
-    // scroll body to 0px on click
-    $('#back-to-top').click(function () {
-        $('#back-to-top').tooltip('hide');
-        $('body,html').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
+  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+  observer.observe();
 
-    $('#back-to-top').tooltip('show');
 
 
 //
 //  Gallery
 //
+
   $(".gallery-filter__btn").click(function(){
       var value = $(this).attr('data-filter');
 
@@ -109,5 +93,27 @@ $('.feedback-card').slick({
  variableWidth: true,
  centerMode: true
 });
+
+//
+//  Back to top btn
+//
+
+$(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+    // scroll body to 0px on click
+    $('#back-to-top').click(function () {
+        $('#back-to-top').tooltip('hide');
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+
+    $('#back-to-top').tooltip('show');
 
 });

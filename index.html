@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Interior_LP</title>
+
+    <!-- Lazyload -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
@@ -205,32 +210,32 @@
 
               <div class="timeline__slider lazy">
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA1.jpg"/>
+                  <img data-lazy="images/timeline/timelineA1.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA2.jpg"/>
+                  <img data-lazy="images/timeline/timelineA2.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA3.jpg"/>
+                  <img data-lazy="images/timeline/timelineA3.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA5.jpg"/>
+                  <img data-lazy="images/timeline/timelineA5.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA6.jpg"/>
+                  <img data-lazy="images/timeline/timelineA6.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA7.jpg"/>
+                  <img data-lazy="images/timeline/timelineA7.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
               </div>
@@ -275,32 +280,32 @@
 
               <div class="timeline__slider lazy">
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA1.jpg"/>
+                  <img data-lazy="images/timeline/timelineA1.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA2.jpg"/>
+                  <img data-lazy="images/timeline/timelineA2.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA3.jpg"/>
+                  <img data-lazy="images/timeline/timelineA3.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA5.jpg"/>
+                  <img data-lazy="images/timeline/timelineA5.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA6.jpg"/>
+                  <img data-lazy="images/timeline/timelineA6.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
 
                 <figure class="timeline__slider__figure">
-                  <img data-lazy="images/timelineA7.jpg"/>
+                  <img data-lazy="images/timeline/timelineA7.jpg"/>
                   <figcaption>室內設計概論、空間構成原理</figcaption>
                 </figure>
               </div>
@@ -513,65 +518,69 @@
       </div>
 
         <div class="container my-5">
-          <div class="row">
+          <div class="row justify-content-center">
 
           <!-- Gallery filter buttons -->
           <div class="w-100 mx-auto my-5">
-              <button class="btn btn-primary gallery-filter__btn" data-filter="all">All</button>
-              <button class="btn btn-primary gallery-filter__btn" data-filter="hdpe">AutoCAD平面製圖</button>
-              <button class="btn btn-primary gallery-filter__btn" data-filter="sprinkle">室內設計實務</button>
-              <button class="btn btn-primary gallery-filter__btn" data-filter="spray">3D空間建模</button>
-              <button class="btn btn-primary gallery-filter__btn" data-filter="irrigation">乙級認證班</button>
+
+              <button class="btn btn-primary gallery-filter__btn" data-filter="autocad">AutoCAD平面製圖</button>
+              <button class="btn btn-primary gallery-filter__btn" data-filter="interior">室內設計實務</button>
+              <button class="btn btn-primary gallery-filter__btn" data-filter="3d">3D空間建模</button>
+              <button class="btn btn-primary gallery-filter__btn" data-filter="certifi">乙級認證班</button>
           </div>
           <br/>
 
-          <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
+          <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-xs-6 filter autocad">
+             <img class="lozad" data-src="images/filter-gallery/filter-gallery-a1.jpg">
+             <div class="gallery_product__content">
+               <h4>學員 沈亭妘 </h4>
+               <h5>床頭板立面圖</h5>
+             </div>
+         </div>
 
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
+         <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-xs-6 filter autocad">
+            <img class="lozad" src="images/filter-gallery/filter-gallery-a1.jpg" class="img-fluid">
+            <div class="gallery_product__content">
+              <h4>學員 沈亭妘 </h4>
+              <h5>床頭板立面圖</h5>
+            </div>
+        </div>
 
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
+        <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-xs-6 filter autocad">
+           <img class="lozad" src="images/filter-gallery/filter-gallery-a1.jpg" class="img-fluid">
+           <div class="gallery_product__content">
+             <h4>學員 沈亭妘 </h4>
+             <h5>床頭板立面圖</h5>
+           </div>
+       </div>
 
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
+         <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-xs-6 filter interior">
+            <img src="images/filter-gallery/filter-gallery-a1.jpg" class="img-fluid">
+            <div class="gallery_product__content">
+              <h4>學員 沈亭妘 </h4>
+              <h5>床頭板立面圖</h5>
+            </div>
+        </div>
 
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
+        <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-xs-6 filter interior">
+           <img src="images/filter-gallery/filter-gallery-a1.jpg" class="img-fluid">
+           <div class="gallery_product__content">
+             <h4>學員 沈亭妘 </h4>
+             <h5>床頭板立面圖</h5>
+           </div>
+       </div>
 
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
+       <div class="gallery_product col-lg-4 col-md-6 col-sm-6 col-xs-6 filter interior">
+          <img src="images/filter-gallery/filter-gallery-a1.jpg" class="img-fluid">
+          <div class="gallery_product__content">
+            <h4>學員 沈亭妘 </h4>
+            <h5>床頭板立面圖</h5>
+          </div>
+      </div>
 
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
 
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
 
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
 
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
-
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
-
- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-     <img src="http://fakeimg.pl/365x365/" class="img-responsive">
- </div>
 
           </div>
         </div>
@@ -948,8 +957,6 @@
 
     <!-- lightbox -->
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-
-
 
 
   </body>
