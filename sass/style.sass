@@ -75,6 +75,7 @@ body
 .section-question
   margin-top: -5rem
   margin-bottom: 5rem
+
   .title-box
 
     &::before
@@ -91,6 +92,14 @@ body
       letter-spacing: 1px
       font-size: 1.3rem
 
+.section-answer
+  .title-box
+    &::before
+      display: none
+
+    &::after
+      display: none
+
 .card__answer
   width: 100%
 
@@ -98,8 +107,12 @@ body
     padding: .5rem 0
     border-bottom: 2px solid $primary
 
+  .card-deck
+
 
   .card
+
+    min-width: 9rem
     border: .2rem solid $primary
     background: white
 
@@ -318,6 +331,7 @@ body
 
 .section-data
   padding-top: 5rem
+  position: relative
 
   &::before
     content: ''
@@ -325,10 +339,10 @@ body
     opacity: .2
     position: absolute
     display: block
+    top: -50%
     width: 100%
-    height: 100%
+
     background: url(../images/timelineA6.jpg) no-repeat top
-    background-size: contain
 
 
 .section-counter
@@ -444,19 +458,25 @@ body
   color: $light
 
   .title-box
+    width: 100%
     text-align: left
-    margin: 1rem
+    margin: 1rem 0
     padding: 0
     margin-top: 2rem
 
   .title-box h2, .title-box h3
     color: $light
 
+  .card
+    min-width: 8rem
+
 
 .form-signup
   background: white
   color: $primary
   padding: 2rem
+  margin-top: 2rem
+  border-radius: $border-radius $border-radius 0 0
 
   h3
     font-weight: bold

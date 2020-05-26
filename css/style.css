@@ -7222,6 +7222,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: relative;
   padding: 2rem;
   margin: 4rem 0;
+  margin-bottom: 2rem;
   display: inline-block; }
   .title-box::before {
     z-index: -1;
@@ -7445,12 +7446,19 @@ body {
     letter-spacing: 1px;
     font-size: 1.3rem; }
 
+.section-answer .title-box::before {
+  display: none; }
+
+.section-answer .title-box::after {
+  display: none; }
+
 .card__answer {
   width: 100%; }
   .card__answer h3 {
     padding: .5rem 0;
     border-bottom: 2px solid #103D65; }
   .card__answer .card {
+    min-width: 9rem;
     border: 0.2rem solid #103D65;
     background: white; }
     .card__answer .card ul {
@@ -7641,17 +7649,17 @@ body {
   background-size: cover; }
 
 .section-data {
-  padding-top: 5rem; }
+  padding-top: 5rem;
+  position: relative; }
   .section-data::before {
     content: '';
     z-index: -1;
     opacity: .2;
     position: absolute;
     display: block;
+    top: -50%;
     width: 100%;
-    height: 100%;
-    background: url(../images/timelineA6.jpg) no-repeat top;
-    background-size: contain; }
+    background: url(../images/timelineA6.jpg) no-repeat top; }
 
 .section-counter {
   padding: 5rem 0; }
@@ -7749,17 +7757,22 @@ body {
   background: #103D65;
   color: #EFEEF0; }
   .section-signup .title-box {
+    width: 100%;
     text-align: left;
-    margin: 1rem;
+    margin: 1rem 0;
     padding: 0;
     margin-top: 2rem; }
   .section-signup .title-box h2, .section-signup .title-box h3 {
     color: #EFEEF0; }
+  .section-signup .card {
+    min-width: 8rem; }
 
 .form-signup {
   background: white;
   color: #103D65;
-  padding: 2rem; }
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 5px 5px 0 0; }
   .form-signup h3 {
     font-weight: bold;
     font-size: 2rem; }
