@@ -7194,6 +7194,13 @@ a.text-dark:hover, a.text-dark:focus {
 .opacity-2 {
   opacity: .4; }
 
+.slick-slide {
+  opacity: .8;
+  margin: 0 1rem; }
+
+.slick-current {
+  opacity: 1; }
+
 .debug-block {
   margin: 100px 0;
   width: 100%;
@@ -7281,9 +7288,6 @@ a.text-dark:hover, a.text-dark:focus {
 .namecard .slick-list {
   overflow-x: hidden; }
 
-.namecard div {
-  margin: 0 2rem; }
-
 .namecard__item {
   overflow: hidden;
   background: white;
@@ -7305,8 +7309,7 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: 1rem; }
 
 .feedback-card .slick-current .feedback-card__item {
-  border-color: #FF693A;
-  border-width: 4px; }
+  border-color: #FF693A; }
   .feedback-card .slick-current .feedback-card__item h4 {
     color: #EFEEF0; }
 
@@ -7370,6 +7373,13 @@ mark,
     width: 100%; }
   .card h3 {
     letter-spacing: 2px; }
+
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; }
 
 html {
   overflow-x: hidden; }
@@ -7646,7 +7656,7 @@ body {
   margin-top: -60px;
   padding: 5rem 0;
   background: url(../images/sectionbg-prove.jpg) no-repeat bottom;
-  background-size: cover; }
+  background-size: namecardcover; }
 
 .section-data {
   padding-top: 5rem;

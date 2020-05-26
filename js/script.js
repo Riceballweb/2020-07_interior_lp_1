@@ -1,5 +1,28 @@
 $( document ).ready(function() {
 //
+//  Back to top btn
+//
+
+$(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+    // scroll body to 0px on click
+    $('#back-to-top').click(function () {
+        $('#back-to-top').tooltip('hide');
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+
+    $('#back-to-top').tooltip('show');
+
+
+//
 //  Gallery
 //
   $(".gallery-filter__btn").click(function(){
@@ -20,7 +43,7 @@ $( document ).ready(function() {
       }
   });
 
-  if ($(".filter-button").removeClass("active")) {
+  if ($(".gallery-filter__btn").removeClass("active")) {
 $(this).removeClass("active");
 }
 $(this).addClass("active");
