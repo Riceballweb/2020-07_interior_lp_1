@@ -7340,7 +7340,8 @@ a.text-dark:hover, a.text-dark:focus {
     font-weight: bold; }
   .feedback-card__item h4 {
     color: gray;
-    font-size: .9rem; }
+    font-size: .9rem;
+    letter-spacing: 2px; }
   .feedback-card__item h5 {
     font-weight: bold; }
 
@@ -7445,10 +7446,12 @@ body {
 .section-question {
   margin-top: -5rem;
   margin-bottom: 5rem; }
-  .section-question .title-box::before {
-    display: none; }
-  .section-question .title-box::after {
-    display: none; }
+  .section-question .title-box {
+    margin: 0; }
+    .section-question .title-box::before {
+      display: none; }
+    .section-question .title-box::after {
+      display: none; }
 
 .card__question .card {
   max-width: 300px; }
@@ -7519,7 +7522,6 @@ body {
   transform: translateX(-50%); }
 
 .timeline-content {
-  padding-bottom: 100px;
   position: relative;
   border-radius: 0 0 10px 10px; }
   .timeline-content .tab-content {
@@ -7530,10 +7532,16 @@ body {
     padding: 2rem 1rem; }
 
 .nav-tabs {
+  flex-wrap: nowrap;
   z-index: 1;
   border: 0;
   top: -40px;
   position: absolute; }
+  @media (max-width: 570px) {
+    .nav-tabs .nav-tabs {
+      font-size: 12px;
+      background: red;
+      outline: 10px solid red; } }
 
 .nav-link {
   letter-spacing: 2px;
@@ -7840,7 +7848,9 @@ body {
   letter-spacing: 2px; }
 
 /*small device style */
-@media (max-width: 767px) {
+@media (max-width: 1107px) {
+  .timeline__slider {
+    margin: 3rem 0; }
   .timeline-nodes:nth-child(odd) h3, .timeline-nodes:nth-child(odd) p {
     text-align: left; }
   .timeline-nodes:nth-child(even) {
@@ -7851,15 +7861,8 @@ body {
     position: absolute;
     top: 0;
     left: 4%;
-    width: 0;
-    border-left: 2px dashed #103D65;
-    height: 100%;
     z-index: 1;
     transform: translateX(-50%); }
-  .timeline h3 {
-    font-size: 1.7rem; }
-  .timeline p {
-    font-size: 14px; }
   .timeline-image {
     position: absolute;
     left: 0%;
@@ -7892,16 +7895,3 @@ body {
     min-height: 100px; } }
 
 /*extra small device style */
-@media (max-width: 575px) {
-  .timeline::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 3%; }
-  .timeline-image {
-    position: absolute;
-    left: -5%; }
-    .timeline-image::before {
-      width: 60px;
-      height: 60px; } }
