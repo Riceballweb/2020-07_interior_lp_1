@@ -79,7 +79,7 @@ $(this).addClass("active");
 
 $('.feedback-card').slick({
  arrows: false,
- dots: false,
+ dots: true,
  infinite: true,
  speed: 300,
  slidesToShow: 1,

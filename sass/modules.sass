@@ -1,3 +1,6 @@
+.opacity-2
+  opacity: .4
+
 //debug block
 .debug-block
   margin: 100px 0
@@ -133,15 +136,21 @@
       border-color: $sub
       border-width: 4px
 
+      h4
+        color: $light
+
     .feedback-card__top
+      color: white
       position: relative
+      background: $sub
+
       &::after
         position: absolute
         left: 0
         content: ''
         display: block
         border-style: solid
-        border-width: 30px 30px 0 30px
+        border-width: 25px 25px 0 25px
         border-color: $sub transparent transparent transparent
 
 .feedback-card__item
@@ -149,28 +158,32 @@
   background: white
   border: 2px solid $primary
   margin: 0 2rem
+  margin-bottom: 1rem
   border-radius: $border-radius
+  transition: .3s
 
   img
-    border-radius: 50%
     margin-right: 1rem
 
   h3
-    color: white
     font-weight: bold
 
   h4
-    color: $light
-    font-size: 1.2rem
+    color: gray
+    font-size: .9rem
+
+  h5
+    font-weight: bold
 
 
   time
 
 .feedback-card__top
-  background: $sub
   padding: 1rem 1rem
   margin-bottom: 1.5rem
-
+  transition: .3s
+  &::before
+    transition: .3s
 
 .feedback-card__body
   margin: 1rem

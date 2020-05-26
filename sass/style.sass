@@ -439,15 +439,15 @@ body
   transform: translate(-50%, -50%)
   max-width: 300px
 
-
-
 .section-signup
   background: $primary
   color: $light
 
   .title-box
+    text-align: left
     margin: 1rem
     padding: 0
+    margin-top: 2rem
 
   .title-box h2, .title-box h3
     color: $light
@@ -462,6 +462,8 @@ body
     font-weight: bold
     font-size: 2rem
 
+.section-feedback
+  padding-bottom: 4rem
 
 .footer
   padding: 5rem
@@ -469,7 +471,13 @@ body
   background: $primary-dark
 
 .footer__logo
-  min-width: 300px
+  max-width: 300px
+  img
+    width: 100%
+
+.footer__copyright
+  margin: 1rem 0
+  letter-spacing: 2px
 
 /*small device style
 @media (max-width: 767px)
