@@ -7304,12 +7304,13 @@ a.text-dark:hover, a.text-dark:focus {
   margin: .2rem 0; }
 
 .text-block {
+  line-height: 1.3;
   margin-right: 1rem;
   display: inline-block;
   position: relative;
   background: #FF693A;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   white-space: nowrap;
   width: 100px;
@@ -7636,6 +7637,10 @@ body {
   .section-answer .title-box::after {
     display: none; }
 
+.card__answer img {
+  border: 10px solid red;
+  max-width: 200px; }
+
 .card__answer .card {
   background: white;
   min-width: 10rem; }
@@ -7825,6 +7830,9 @@ body {
   letter-spacing: 3px;
   background: #103D65;
   border-radius: 5px; }
+  .timeline__slider__figure img {
+    object-fit: cover;
+    max-height: 260px; }
   .timeline__slider__figure figcaption {
     margin: .3rem 0; }
 
@@ -7897,6 +7905,9 @@ body {
     display: none; }
   .section-gallery .title-box::after {
     display: none; }
+
+.gallery-filter__btn {
+  margin: 0 1rem; }
 
 .slick-slider {
   width: 100%; }
@@ -8105,6 +8116,10 @@ body {
     min-height: 100px; } }
 
 /*extra small device style */
+@media (max-width: 1107px) {
+  .timeline-nodes:nth-child(even) {
+    justify-content: flex-start; } }
+
 @media (max-width: 575px) {
   .timeline::before {
     content: "";
