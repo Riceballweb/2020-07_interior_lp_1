@@ -1,8 +1,10 @@
 @charset "UTF-8"
-@import "sass/movingBg"
 @import "sass/variable"
+@import "sass/movingBg"
 @import "node_modules/bootstrap/scss/bootstrap"
 @import "sass/modules"
+
+@import "sass/slick-theme"
 
 .back-to-top
     cursor: pointer
@@ -10,8 +12,6 @@
     bottom: 20px
     right: 20px
     display: none
-
-
 
 html
   overflow-x: hidden
@@ -197,6 +197,10 @@ body
     background: white
     padding: 2rem 1rem
 
+    ul
+      padding: 0
+      margin: 0
+
 .nav-tabs
   flex-wrap: nowrap
   z-index: 1
@@ -365,9 +369,10 @@ body
 
 .card-counter
   .card
-    background: white
     overflow: hidden
-    max-width: 300px
+    background: white
+    min-width: 200px
+    margin: 1rem
     color: $primary
     border: .3rem solid $primary
 
@@ -393,11 +398,21 @@ body
 .section-gallery
 
   .container-fluid
-    background: $sub
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -1
+      display: block
+      width: 100%
+      height: 80%
+      background: $sub
 
   .title-box
     margin: 0
-    color: $light
+    color: white
 
     &::before
       display: none
@@ -410,17 +425,30 @@ body
 
 .big-gallery
 
+  .slick-current
+    transform: scale(1.3)
+
+.big-gallery__item
+  position: relative
+
   img
     width: 80%
     height: 100%
     margin: 0 auto
 
-  .slick-center
-    transform: scale(1.3)
+  figcaption
+    color: $light
+    font-size: .8rem
+    font-weight: bold
+    letter-spacing: 2px
+    bottom: 8%
+    left: 50%
+    transform: translateX(-50%)
+    position: absolute
+
+
 
 // Filter gallery
-
-
 .btn-default:active .filter-button:active
   background-color: #42B32F
   color: white
@@ -461,7 +489,7 @@ body
     object-fit: contain
     transition: .3s
 
-.interior
+.interior, .three-d, .certifi
   display: none
 
 .gallery_product__content
@@ -472,9 +500,15 @@ body
   color: $light
   opacity: 0
   transition: .3s
+  text-align: center
 
+  h4
+    white-space: nowrap
+    font-weight: bold
 
-
+  h5
+    font-size: 1rem
+    letter-spacing: 3px
 
 
 
@@ -560,19 +594,28 @@ body
   margin: 1rem 0
   letter-spacing: 2px
 
+.timeline
+  .row
+    justify-content: space-around
+
+
 /*small device style
 @media (max-width: 1107px)
+
+  .timeline
+    .row
+      justify-content: flex-end
 
   .timeline__slider
     margin: 3rem 0
 
   .timeline-nodes
+
     &:nth-child(odd)
-      h3, p
-        text-align: left
+
 
     &:nth-child(even)
-      flex-direction: row
+
 
   .timeline
     &::before
@@ -623,3 +666,19 @@ body
     min-height: 100px
 
 /*extra small device style
+@media (max-width: 575px)
+  .timeline::before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 3%
+
+  .timeline-image
+
+    position: absolute
+    left: -5%
+
+    &::before
+      width: 60px
+      height: 60px

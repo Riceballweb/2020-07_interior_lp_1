@@ -1,14 +1,14 @@
 $( document ).ready(function() {
 
-  const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+//
+// LAZYLOAD
+//
+  const observer = lozad();
   observer.observe();
 
-
-
 //
-//  Gallery
+// Filter Gallery
 //
-
   $(".gallery-filter__btn").click(function(){
       var value = $(this).attr('data-filter');
 
@@ -33,9 +33,10 @@ $(this).removeClass("active");
 $(this).addClass("active");
 
 
+//
+// Sliders
+//
 
-
-  // Namecard
   $('.namecard').slick({
    arrows: false,
    dots: false,
@@ -46,7 +47,6 @@ $(this).addClass("active");
    centerMode: true
   });
 
-  // BigGallery
   $('.big-gallery').slick({
     centerMode: true,
     arrows: true,
@@ -57,7 +57,7 @@ $(this).addClass("active");
 
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 868,
         settings: {
           arrows: false,
           centerMode: true,
@@ -65,15 +65,7 @@ $(this).addClass("active");
           slidesToShow: 1
         }
       },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
+
     ]
   });
 
@@ -81,7 +73,7 @@ $(this).addClass("active");
   lazyLoad: 'ondemand',
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: true
+  arrows: false,
 });
 
 $('.feedback-card').slick({
@@ -91,7 +83,8 @@ $('.feedback-card').slick({
  speed: 300,
  slidesToShow: 1,
  variableWidth: true,
- centerMode: true
+ centerMode: true,
+
 });
 
 //

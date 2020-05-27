@@ -2,11 +2,9 @@
   opacity: .4
 
 .slick-slide
-  opacity: .8
+  transition: .3s
   margin: 0 1rem
 
-.slick-current
-  opacity: 1
 
 //debug block
 .debug-block
@@ -148,15 +146,12 @@
       background: $sub
 
       &::after
-        position: absolute
-        left: 0
-        content: ''
-        display: block
-        border-style: solid
-        border-width: 25px 25px 0 25px
-        border-color: $sub transparent transparent transparent
+        opacity: 1
+
+
 
 .feedback-card__item
+  position: relative
   max-width: 400px
   background: white
   border: 2px solid $primary
@@ -186,8 +181,17 @@
   padding: 1rem 1rem
   margin-bottom: 1.5rem
   transition: .3s
-  &::before
-    transition: .3s
+
+  &::after
+    position: absolute
+    left: 0
+    content: ''
+    display: block
+    border-style: solid
+    border-width: 25px 25px 0 25px
+    border-color: $sub transparent transparent transparent
+    transition: .7s
+    opacity: 0
 
 .feedback-card__body
   margin: 1rem
