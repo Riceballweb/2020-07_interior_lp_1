@@ -85,6 +85,9 @@ body
   margin-top: -5rem
   margin-bottom: 5rem
 
+  .container
+    position: relative
+
   .title-box
     margin: 0
 
@@ -94,7 +97,7 @@ body
     &::after
       display: none
 
-.card__question
+.card-deck--question
   .card
     max-width: 300px
 
@@ -112,20 +115,10 @@ body
       display: none
 
 .card__answer
-  width: 100%
-
-  h3
-    padding: .5rem 0
-    border-bottom: 2px solid $primary
-
-  .card-deck
-
 
   .card
-
-    min-width: 9rem
-    border: .2rem solid $primary
     background: white
+    min-width: 10rem
 
     ul
       list-style-type: none
@@ -133,7 +126,7 @@ body
       text-align: left
 
     li
-      font-size: 1.3rem
+      font-size: 1rem
       text-align: center
 
   .card__steps
@@ -147,6 +140,7 @@ body
     h4
       display: inline-block
       border-bottom: 2px solid red
+
 
 
 
@@ -585,10 +579,24 @@ body
   color: $light
   background: $primary-dark
 
+  .row
+    margin: 0
+
 .footer__logo
-  max-width: 300px
+  margin-bottom: 2rem
   img
-    width: 100%
+    min-width: 250px
+
+.social
+  margin: 0 2rem
+  img
+    max-width: 100px
+    margin: 0 .6rem
+    transition: .3s
+    &:hover
+      transform: scale(1.2)
+      border-radius: 50%
+
 
 .footer__copyright
   margin: 1rem 0
