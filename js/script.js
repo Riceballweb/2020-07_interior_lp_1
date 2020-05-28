@@ -1,5 +1,32 @@
 $( document ).ready(function() {
 
+
+// Chart
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['一居室 \n 60㎡', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '新台幣',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [36, 54, 108, 210, 360, ],
+            labels: ['1', '2', '33', 'April', 'May', 'June'],
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+
+      
+    }
+});
+
 //
 // LAZYLOAD
 //

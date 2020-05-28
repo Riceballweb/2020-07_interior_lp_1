@@ -102,9 +102,15 @@
 
       <div class="card-deck card__answer text-center mt-4">
         <div class="card">
+          <div class="box-handdraw">
+            <div class="box-handdraw__top"></div>
+            <div class="box-handdraw__bottom"></div>
+            <div class="box-handdraw__left"></div>
+            <div class="box-handdraw__right"></div>
+          </div>
           <img class="card__steps" src="/images/svg/step01.svg" alt="">
-          <img class="mt-n2 mr-2 lozad" data-src="images/ans01.jpg" alt="Card image cap">
           <div class="card-body">
+            <img class="mt-n2 mr-2 lozad" data-src="images/ans01.jpg" alt="Card image cap">
             <h3 class="font-weight-bold">軟體速學</h3>
             <ul>
               <li>熟悉軟體操作</li>
@@ -114,6 +120,12 @@
           </div>
         </div>
         <div class="card">
+          <div class="box-handdraw">
+            <div class="box-handdraw__top"></div>
+            <div class="box-handdraw__bottom"></div>
+            <div class="box-handdraw__left"></div>
+            <div class="box-handdraw__right"></div>
+          </div>
           <img class="card__steps" src="/images/svg/step01.svg" alt="">
           <img class="mt-n2 mr-2 lozad" data-src="images/ans02.jpg" alt="Card image cap">
           <div class="card-body">
@@ -126,6 +138,12 @@
           </div>
         </div>
         <div class="card">
+          <div class="box-handdraw">
+            <div class="box-handdraw__top"></div>
+            <div class="box-handdraw__bottom"></div>
+            <div class="box-handdraw__left"></div>
+            <div class="box-handdraw__right"></div>
+          </div>
           <img class="card__steps" src="/images/svg/step01.svg" alt="">
           <img class="mt-n2 mr-2 lozad" data-src="images/ans03.jpg" alt="Card image cap">
           <div class="card-body">
@@ -632,7 +650,7 @@
           <p class="text-left">室內設計師薪資計算方式是底薪+提成，設計費行情普遍落在每坪6,000~20,000元，一個能夠獨立完成設計方案的室內設計師，提成的金額為總工程費的5%~8%，越資深、作品越多、知名度越高，薪資當然也高，所以接單越多、設計面積越大，收入越高。</p>
         </div>
         <div class="col-6">
-          <img src="https://placekitten.com/g/500/300">
+          <canvas id="myChart"></canvas>
 
         </div>
       </div>
@@ -1360,6 +1378,9 @@
   <!-- lightbox -->
   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
+
+  <!-- Chart -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 </body>
 

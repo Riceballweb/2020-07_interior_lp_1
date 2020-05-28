@@ -7637,13 +7637,14 @@ body {
   .section-answer .title-box::after {
     display: none; }
 
-.card__answer img {
-  border: 10px solid red;
-  max-width: 200px; }
+.card__answer .lozad {
+  width: 100%;
+  object-fit: cover; }
 
 .card__answer .card {
   background: white;
-  min-width: 10rem; }
+  min-width: 10rem;
+  margin: 0 2rem; }
   .card__answer .card ul {
     list-style-type: none;
     padding: 0;
@@ -7651,6 +7652,10 @@ body {
   .card__answer .card li {
     font-size: 1rem;
     text-align: center; }
+  .card__answer .card:nth-of-type(1) {
+    transform: rotate(-8deg); }
+  .card__answer .card:nth-of-type(3) {
+    transform: rotate(8deg); }
 
 .card__answer .card__steps {
   z-index: 2;
