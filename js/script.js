@@ -3,14 +3,14 @@ $( document ).ready(function() {
 
 // Chart
 
-var ctx = document.getElementById('myChart').getContext('2d');
+var ctx = document.getElementById('salary').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'bar',
 
     // The data for our dataset
     data: {
-        labels: ['一居室 \n 60㎡', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['一居室 60㎡', '二居室 90㎡', '三居室 180㎡', '四居室 350㎡', '獨棟別墅 600㎡'],
         datasets: [{
             label: '新台幣',
             backgroundColor: 'rgb(255, 99, 132)',
@@ -23,7 +23,7 @@ var chart = new Chart(ctx, {
     // Configuration options go here
     options: {
 
-      
+
     }
 });
 
