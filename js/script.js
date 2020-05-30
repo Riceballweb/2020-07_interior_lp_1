@@ -1,6 +1,58 @@
 $( document ).ready(function() {
 
 
+  var $form = $("form.form-distribution");
+  loadLocation({
+    city: {
+      element: $form.find("[name=city]"),
+      defaultLabel: "請選縣市",
+      errorMessage: "無法載入縣市資料"
+    },
+    area: {
+      element: $form.find("[name=area]"),
+      defaultLabel: "請選地區",
+      errorMessage: "無法載入地區資料"
+    }
+  });
+
+  $form
+    .submit(function(e) {
+      e.preventDefault();
+    })
+    .validate({
+      // debug: true,
+      submitHandler: distributionSubmitHandler({
+        successMessage: "資料已送出，將安排專人與您聯絡",
+        errorMessage: "您輸入的資料有誤或者已輸入過相同資料"
+      }),
+      rules: {
+        name: "required",
+        email: { required: true, email: true },
+        cellphone: { required: true, cellphone: true },
+        city: "required",
+        area: "required",
+        remark: "required",
+        course: "required",
+        agreement: "required"
+      },
+      messages: {
+        name: "請輸入您的姓名",
+        email: {
+          required: "請輸入您的E-mail信箱",
+          email: "請輸入有效的E-mail信箱"
+        },
+        cellphone: {
+          required: "請輸入您的聯絡電話",
+          cellphone: "請輸入有效的聯絡電話"
+        },
+        city: "請選擇縣市",
+        area: "請選擇地區",
+        remark: "請選擇您從哪裡得知資訊",
+        course: "請選擇想學課程",
+        agreement: "您尚未接受隱私權使用條款"
+      }
+    });
+
 // Chart
 
 var ctx = document.getElementById('salary').getContext('2d');
@@ -12,7 +64,7 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['一居室 60㎡', '二居室 90㎡', '三居室 180㎡', '四居室 350㎡', '獨棟別墅 600㎡'],
         datasets: [{
-            label: '新台幣',
+            label: '新台幣(萬元)',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: [36, 54, 108, 210, 360, ],
@@ -135,5 +187,8 @@ $(window).scroll(function () {
     });
 
     $('#back-to-top').tooltip('show');
+
+
+
 
 });

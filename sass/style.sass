@@ -3,6 +3,7 @@
 @import "sass/movingBg"
 @import "node_modules/bootstrap/scss/bootstrap"
 @import "sass/modules"
+@import "sass/keyframes"
 
 @import "sass/slick-theme"
 
@@ -12,6 +13,15 @@
     bottom: 20px
     right: 20px
     display: none
+    background: transparent
+    color: $primary
+    font-weight: bold
+    transition: .3s
+
+    &:hover
+      transform: translateY(-5px)
+      .box-handdraw
+        opacity: 0
 
 html
   overflow-x: hidden
@@ -97,6 +107,10 @@ body
     &::after
       display: none
 
+.section-question__img
+  z-index: 60
+  margin-top: -10%
+
 .card-deck--question
   .card
     max-width: 300px
@@ -104,6 +118,13 @@ body
     h4
       letter-spacing: 1px
       font-size: 1.3rem
+
+    img
+      margin-top: 2rem
+      animation: flying 1s ease 0s infinite alternate
+
+    img:nth-of-type(2)
+      outline: 10px solid red
 
 .section-answer
   padding-bottom: 5rem
@@ -117,8 +138,7 @@ body
 .card__answer
 
   .lozad
-    width: 100%
-    object-fit: cover
+
 
 
   .card
@@ -135,17 +155,11 @@ body
       font-size: 1rem
       text-align: center
 
-    &:nth-of-type(1)
-      transform: rotate(-8deg)
-
-    &:nth-of-type(3)
-      transform: rotate(8deg)
-
 
 
 
   .card__steps
-    z-index: 2
+    z-index: 50
     position: absolute
     top: -10%
     left: -10%
@@ -161,9 +175,29 @@ body
 
 .section-timeline
 
-.timeline
-  padding: 50px 0
+.section-timeline__intro
   position: relative
+  &::before
+    position: absolute
+    top: 0
+    left: 0
+    content: ''
+    display: block
+    width: 300px
+    height: 300px
+    background: url('../images/svg/question/a1.svg') no-repeat center
+    background-size: cover
+
+  &::after
+    position: absolute
+    top: 0
+    right: 0
+    content: ''
+    display: block
+    width: 300px
+    height: 300px
+    background: url('../images/svg/question/a1.svg') no-repeat center
+    background-size: cover
 
 .timeline-nodes
   margin: 5rem 0
@@ -174,6 +208,9 @@ body
 
 
 .timeline
+  padding: 50px 0
+  position: relative
+
 
   h3, p
     color: $primary
@@ -192,6 +229,8 @@ body
     height: 100%
     z-index: 1
     transform: translateX(-50%)
+
+
 
 // Overwrite bootstrap tab
 .timeline-content
@@ -558,18 +597,47 @@ body
   width: 100%
   height: 100%
   position: relative
+  transition: .3s
+
+  &::after
+    z-index: 10
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    background: $sub
+    position: absolute
+    top: 0
+    left: 0
+    opacity: .2
+    transition: .3s
+
+  &:hover
+    transform: translateY(-10px)
+
+    &::after
+      opacity: .8
+
+    .box-handdraw
+      transform: translate(-1%, -1%)
+
+      div
+        background: $sub
 
 .video-lightbox__thumbnail
+  position: relative
+  z-index: 10
   max-height: 300px
   width: 100%
   object-fit: cover
 
 .video-lightbox__playbutton
   position: absolute
+  z-index: 20
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
-  max-width: 300px
+  max-width: 60px
 
 .section-signup
   background: $primary
