@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant-TW">
 
 <head>
   <title>Interior_LP</title>
@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Lazyload -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-
+  <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
 
@@ -15,8 +15,6 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <!-- Lightbox -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-  <!-- bootstrap RFS -->
-  <link href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-rfs/bootstrap-rfs.css" rel="stylesheet">
 </head>
 
 <body>
@@ -27,7 +25,7 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <span class="bg-white text-primary d-inline-block py-2 px-4 mb-1">業界激推 No.01</span>
-        <h1 class="display-3 font-weight-bold">學室內到「赫綵」<br>三個月保證讓業界搶著要你！</h1>
+        <h1 class="display-4 font-weight-bold">學室內到「赫綵」<br>三個月保證讓業界搶著要你！</h1>
         <h2>零基礎到就業，讓你從此不缺工作，只挑工作。</h2>
         <ul class="hero-list">
           <li>零基礎學到會</li>
@@ -40,14 +38,7 @@
   </section>
 
   <section class="section-question">
-    <div class="container bg-white">
-      <div class="box-handdraw">
-        <div class="box-handdraw__top"></div>
-        <div class="box-handdraw__bottom"></div>
-        <div class="box-handdraw__left"></div>
-        <div class="box-handdraw__right"></div>
-      </div>
-
+    <div class="container bg-white pb-4">
       <div class="row justify-content-center align-items-center">
         <img class="section-question__img" style="max-width: 350px" class="mt-n2 mr-2" src="images/svg/question/a1.svg" alt="Card image cap">
         <div class="title-box">
@@ -87,8 +78,8 @@
     </div>
   </section>
 
-  <section class="section-answer text-center">
-    <div class="container">
+  <section class="section-answer">
+    <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="title-box d-flex align-items-center">
           <span class="text-block">
@@ -100,18 +91,21 @@
         </div>
       </div>
 
-      <div class="card-deck card__answer text-center mt-4">
+      <div class="section-answer__intro">
+        <img class="m-auto img-fluid lozad" data-src="images/t1.jpg" alt="Card image cap">
+      </div>
+      <div class="card-deck card__answer mt-4">
         <div class="card">
-          <div class="box-handdraw">
-            <div class="box-handdraw__top"></div>
-            <div class="box-handdraw__bottom"></div>
-            <div class="box-handdraw__left"></div>
-            <div class="box-handdraw__right"></div>
-          </div>
-          <img class="card__steps" src="/images/svg/step01.svg" alt="">
+          <!-- <img class="lozad" data-src="images/ans01.jpg" alt="Card image cap"> -->
           <div class="card-body">
-            <img class="mt-n2 mr-2 lozad" data-src="images/ans01.jpg" alt="Card image cap">
-            <h3 class="font-weight-bold">軟體速學</h3>
+            <div class="card-body__heading">
+              <i class=" fa fa-graduation-cap" aria-hidden="true"></i>
+              <div class="">
+                <h3 class="font-weight-bold">軟體速學</h3>
+                <h4>Software</h4>
+              </div>
+            </div>
+            <hr>
             <ul>
               <li>熟悉軟體操作</li>
               <li>掌握全面知識</li>
@@ -119,17 +113,18 @@
             </ul>
           </div>
         </div>
+
         <div class="card">
-          <div class="box-handdraw">
-            <div class="box-handdraw__top"></div>
-            <div class="box-handdraw__bottom"></div>
-            <div class="box-handdraw__left"></div>
-            <div class="box-handdraw__right"></div>
-          </div>
-          <img class="card__steps" src="/images/svg/step01.svg" alt="">
-          <img class="mt-n2 mr-2 lozad" data-src="images/ans02.jpg" alt="Card image cap">
+          <!-- <img class="lozad" data-src="images/ans02.jpg" alt="Card image cap"> -->
           <div class="card-body">
-            <h3 class="font-weight-bold">工地實務</h3>
+            <div class="card-body__heading">
+              <i class="fa fa-search" aria-hidden="true"></i>
+              <div class="">
+                <h3 class="font-weight-bold">工地實務</h3>
+                <h4>Software</h4>
+              </div>
+            </div>
+            <hr>
             <ul>
               <li>工地現場專業術語 </li>
               <li>直擊工地現場</li>
@@ -138,16 +133,16 @@
           </div>
         </div>
         <div class="card">
-          <div class="box-handdraw">
-            <div class="box-handdraw__top"></div>
-            <div class="box-handdraw__bottom"></div>
-            <div class="box-handdraw__left"></div>
-            <div class="box-handdraw__right"></div>
-          </div>
-          <img class="card__steps" src="/images/svg/step01.svg" alt="">
-          <img class="mt-n2 mr-2 lozad" data-src="images/ans03.jpg" alt="Card image cap">
+          <!-- <img class="lozad" data-src="images/ans03.jpg" alt="Card image cap"> -->
           <div class="card-body">
-            <h3 class="font-weight-bold">考取證照</h3>
+            <div class="card-body__heading">
+              <i class="fa fa-id-card" aria-hidden="true"></i>
+              <div class="">
+                <h3 class="font-weight-bold">考取證照</h3>
+                <h4>Software</h4>
+              </div>
+            </div>
+            <hr>
             <ul>
               <li>室內乙級證照</li>
               <li>優先錄取、加薪、升職</li>
@@ -160,8 +155,10 @@
   </section>
 
   <section class="section-timeline">
+
+
     <div class="container">
-      <div class="row section-timeline__intro justify-content-center">
+      <div class="row section-timeline__intro">
         <div class="title-box">
           <h2><mark>從零基礎到考取證照</mark>，一條龍課程規劃</h2>
           <h3>百萬室內設計師為不同基礎學員打造課程需求</h3>
@@ -171,7 +168,7 @@
 
         <!-- Timeline-item -->
         <div class="row no-gutters align-items-center  timeline-nodes">
-          <div class="col-10 col-lg-5 col-md-10 order-3 order-md-1 timeline-content">
+          <div class="col-10 col-lg-5 col-md-10 col-sm-12 order-3 order-md-1 timeline-content">
             <nav>
               <div class="nav nav-tabs" id="nav-tab-a1" role="tablist">
                 <a class="nav-item nav-link active" id="nav-home-tab-a1" data-toggle="tab" href="#nav-home-a1" role="tab" aria-controls="nav-home-a1" aria-selected="true">AutoCAD 設計實務</a>
@@ -180,7 +177,7 @@
             </nav>
             <div class="tab-content" id="nav-tabContent-a1">
               <div class="tab-pane fade show active" id="nav-home-a1" role="tabpanel" aria-labelledby="nav-home-tab-a1">
-                <h3>學會AutoCAD學習事半功倍</h3>
+                <h3>學會AutoCAD，<br>學習事半功倍</h3>
                 <p>手繪透視圖練習｜綠建材介紹｜裝修法規｜金屬與門窗工程｜拆除與水電工程｜空間實務創作｜木作、燈光、粉刷工程</p>
               </div>
               <div class="tab-pane fade" id="nav-salary-a1" role="tabpanel" aria-labelledby="nav-salary-tab-a1">
@@ -195,14 +192,14 @@
             </div>
           </div>
 
-          <div class="col-2 col-sm-1 order-2 timeline-image text-md-center">
+          <div class="col-2 col-md-1 order-2 timeline-image text-md-center">
             <div>
               <span>Level</span>
               <span class="timeline-image__number">01</span>
             </div>
           </div>
 
-          <div class="col-10 col-lg-5 col-md-10 order-1 order-md-3 py-3 timeline-date">
+          <div class="col-10 col-lg-5 col-md-10 col-sm-12 order-1 order-md-3 py-3 timeline-date">
             <div class="timeline__slider lazy">
               <figure class="timeline__slider__figure">
                 <img data-lazy="images/timeline/timelineA1.jpg" />
@@ -270,7 +267,7 @@
 
         <!-- Timeline-item -->
         <div class="row no-gutters align-items-center  timeline-nodes">
-          <div class="col-10 col-lg-5 col-md-10 order-3 order-md-1 timeline-content">
+          <div class="col-10 col-lg-5 col-md-10 col-sm-12 order-3 order-md-1 timeline-content">
             <nav>
               <div class="nav nav-tabs" id="nav-tab-a2" role="tablist">
                 <a class="nav-item nav-link active" id="nav-home-tab-a2" data-toggle="tab" href="#nav-home-a2" role="tab" aria-controls="nav-home-a2" aria-selected="true">室內設計實務</a>
@@ -294,14 +291,14 @@
             </div>
           </div>
 
-          <div class="col-2 col-sm-1 order-2 timeline-image text-md-center">
+          <div class="col-2 col-md-1 col-sm-1 order-2 timeline-image text-md-center">
             <div>
               <span>Level</span>
               <span class="timeline-image__number">02</span>
             </div>
           </div>
 
-          <div class="col-10 col-lg-5 col-md-10 order-1 order-md-3 py-3 timeline-date">
+          <div class="col-10 col-lg-5 col-md-10 col-sm-12 order-1 order-md-3 py-3 timeline-date">
             <div class="timeline__slider lazy">
               <figure class="timeline__slider__figure">
                 <img data-lazy="images/timeline/timelineB1.jpg" />
@@ -354,7 +351,7 @@
 
         <!-- Timeline-item -->
         <div class="row no-gutters align-items-center  timeline-nodes">
-          <div class="col-10 col-lg-5 col-md-10 order-3 order-md-1 timeline-content">
+          <div class="col-10 col-lg-5 col-md-10 col-sm-12 order-3 order-md-1 timeline-content">
             <nav>
               <div class="nav nav-tabs" id="nav-tab-a3" role="tablist">
                 <a class="nav-item nav-link active" id="nav-home-tab-a3" data-toggle="tab" href="#nav-home-a3" role="tab" aria-controls="nav-home-a3" aria-selected="true">SketchUpPro 3D空間建模</a>
@@ -378,14 +375,14 @@
             </div>
           </div>
 
-          <div class="col-2 col-sm-1 order-2 timeline-image text-md-center">
+          <div class="col-2 col-md-1 col-sm-1 order-2 timeline-image text-md-center">
             <div>
               <span>Level</span>
               <span class="timeline-image__number">03</span>
             </div>
           </div>
 
-          <div class="col-10 col-lg-5 col-md-10 order-1 order-md-3 py-3 timeline-date">
+          <div class="col-10 col-lg-5 col-md-10 col-sm-12 order-1 order-md-3 py-3 timeline-date">
             <div class="timeline__slider lazy">
               <figure class="timeline__slider__figure">
                 <img data-lazy="images/timeline/timelineC1.jpg" />
@@ -438,7 +435,7 @@
 
         <!-- Timeline-item -->
         <div class="row no-gutters align-items-center  timeline-nodes">
-          <div class="col-10 col-lg-5 col-md-10 order-3 order-md-1 timeline-content">
+          <div class="col-10 col-lg-5 col-md-10 col-sm-12 order-3 order-md-1 timeline-content">
             <nav>
               <div class="nav nav-tabs" id="nav-tab-a4" role="tablist">
                 <a class="nav-item nav-link active" id="nav-home-tab-a4" data-toggle="tab" href="#nav-home-a4" role="tab" aria-controls="nav-home-a4" aria-selected="true">室內設計乙級認證班</a>
@@ -461,14 +458,14 @@
             </div>
           </div>
 
-          <div class="col-2 col-sm-1 order-2 timeline-image text-md-center">
+          <div class="col-2 col-md-1 col-sm-1 order-2 timeline-image text-md-center">
             <div>
               <span>Level</span>
               <span class="timeline-image__number">04</span>
             </div>
           </div>
 
-          <div class="col-10 col-lg-5 col-md-10 order-1 order-md-3 py-3 timeline-date">
+          <div class="col-10 col-lg-5 col-md-10 col-sm-12 order-1 order-md-3 py-3 timeline-date">
             <div class="timeline__slider lazy">
               <figure class="timeline__slider__figure">
                 <img data-lazy="images/timeline/timelineD1.jpg" />
@@ -532,10 +529,10 @@
       <div class="row d-flex justify-content-center">
         <div class="namecard">
 
-          <div class="namecard__item shadow-lg">
+          <div class="namecard__item">
             <img class="float-left mr-3" src="images/person1.jpg" alt="">
             <div class="namecard__item__content">
-              <h3>匯僑設計</h3>
+              <h3 class="h4">匯僑設計</h3>
               <span>設計師助理 蔡碩峰</span>
               <h4>2018 取得<br><mark>
                   乙級建築物室內設計技術士</mark></h4>
@@ -544,10 +541,10 @@
             </div>
           </div>
 
-          <div class="namecard__item shadow-lg">
+          <div class="namecard__item">
             <img class="float-left mr-3" src="images/person2.jpg" alt="">
             <div class="namecard__item__content">
-              <h3>台北建築師事務所</h3>
+              <h3 class="h4">台北建築師事務所</h3>
               <span>室內設計師 楊龍威</span>
               <h4>2018 取得<br><mark>
                   乙級建築物室內設計技術士</mark></h4>
@@ -556,10 +553,10 @@
             </div>
           </div>
 
-          <div class="namecard__item shadow-lg">
+          <div class="namecard__item">
             <img class="float-left mr-3" src="images/person3.jpg" alt="">
             <div class="namecard__item__content">
-              <h3>廣展成室內裝修有限公司</h3>
+              <h3 class="h4">廣展成室內裝修有限公司</h3>
               <span>室內設計師 李宛蒨</span>
               <h4>2019 取得<br><mark>
                   乙級建築物室內設計技術士</mark></h4>
@@ -568,10 +565,10 @@
             </div>
           </div>
 
-          <div class="namecard__item shadow-lg">
+          <div class="namecard__item">
             <img class="float-left mr-3" src="images/person4.jpg" alt="">
             <div class="namecard__item__content">
-              <h3>趙玲室內設計有限公司</h3>
+              <h3 class="h4">趙玲室內設計有限公司</h3>
               <span>室內設計助理 曾纚蘧</span>
               <h4>2018 取得<br><mark>
                   乙級建築物室內設計技術士</mark></h4>
@@ -580,10 +577,10 @@
             </div>
           </div>
 
-          <div class="namecard__item shadow-lg">
+          <div class="namecard__item">
             <img class="float-left mr-3" src="images/person5.jpg" alt="">
             <div class="namecard__item__content">
-              <h3>黃偉倫國際聯合建築師事務所</h3>
+              <h3 class="h4">黃偉倫國際聯合建築師事務所</h3>
               <span>室內設計師 葉安琦</span>
               <h4>2018 取得<br><mark>
                   乙級建築物室內設計技術士</mark></h4>
@@ -592,30 +589,30 @@
             </div>
           </div>
 
-          <div class="namecard__item shadow-lg">
+          <div class="namecard__item">
             <img class="float-left mr-3" src="images/person6.jpg" alt="">
             <div class="namecard__item__content">
-              <h3>耘品空間設計</h3>
+              <h3 class="h4">耘品空間設計</h3>
               <span>室內設計師 姚忻妤</span>
               <h4>2020 取得<br><mark>
                   乙級建築物室內裝修工程管理技術士</mark></h4>
             </div>
           </div>
 
-          <div class="namecard__item shadow-lg">
+          <div class="namecard__item">
             <img class="float-left mr-3" src="images/person7.jpg" alt="">
             <div class="namecard__item__content">
-              <h3>森河空間規劃有限公司</h3>
+              <h3 class="h4">森河空間規劃有限公司</h3>
               <span>室內設計師 方思閔</span>
               <h4>2019 取得<br><mark>
                   乙級建築物室內裝修工程管理技術士</mark></h4>
             </div>
           </div>
 
-          <div class="namecard__item shadow-lg">
+          <div class="namecard__item">
             <img class="float-left mr-3" src="images/person8.jpg" alt="">
             <div class="namecard__item__content">
-              <h3>木築屋有限公司</h3>
+              <h3 class="h4">木築屋有限公司</h3>
               <span>執行長 簡士哲</span>
               <h4>2019 取得<br><mark>
                   乙級建築物室內裝修工程管理技術士</mark></h4>
@@ -1069,7 +1066,7 @@
               <input name="outletSub" type="text" hidden value="213" />
               <input name="mediaSub" type="text" hidden value="642" />
               <input name="type" type="text" hidden value="Event" />
-              <h3 class="form__title">課程好不好，試學就知道！</h3>
+              <h3 class="form__title">課程好不好，<br>只需試學就知道！</h3>
               <p class="form__text mt-2">填寫資料即有機會獲得免費課程，專人會在預約時間與你聯繫。<br>每日僅限20位，先到先得！</p>
               <div class="row mt-4">
                 <div class="col-md-6">
@@ -1515,7 +1512,11 @@
   <!-- 引入 jquery.validate -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
 
+  <!-- Form -->
   <script type="text/javascript" src="https://www.appedu.com.tw/Librarys/Scripts/distribution2020.js" charset="UTF-8"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/ad37c3e1e4.js"></script>
 
 </body>
 

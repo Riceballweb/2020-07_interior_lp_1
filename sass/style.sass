@@ -2,6 +2,7 @@
 @import "sass/variable"
 @import "sass/movingBg"
 @import "node_modules/bootstrap/scss/bootstrap"
+@import "sass/bootstrap-rfs"
 @import "sass/modules"
 @import "sass/keyframes"
 
@@ -13,7 +14,7 @@
     bottom: 20px
     right: 20px
     display: none
-    background: transparent
+    background: white
     color: $primary
     font-weight: bold
     transition: .3s
@@ -36,6 +37,7 @@ body
   margin: 0
   height: 100vh
   color: white
+
 
   .jumbotron
     background-color: transparent
@@ -76,6 +78,8 @@ body
   padding: 0
 
   li
+
+    font-size: calc(.8rem + 0.1vw)
     position: relative
     display: inline-block
     margin-right: 2rem
@@ -113,7 +117,8 @@ body
 
 .card-deck--question
   .card
-    max-width: 300px
+    min-width: 300px
+
 
     h4
       letter-spacing: 1px
@@ -135,27 +140,74 @@ body
     &::after
       display: none
 
+.section-answer__intro
+  width: 100%
+  margin: 0 auto
+  text-align: center
+  margin-bottom: -3rem
+
 .card__answer
-
-  .lozad
-
-
+  max-width: 1200px
+  margin: 0 auto
 
   .card
+    text-align: left
+    overflow: hidden
     background: white
     min-width: 10rem
+    max-width: 15rem
+
     margin: 0 2rem
+    border: 3px solid red
+
+    &:nth-of-type(1)
+      border-color: $green
+
+    &:nth-of-type(2)
+      border-color: $red
+      transform: translateY(-30px)
+      .card-body__heading
+        color: $red
+
+    &:nth-of-type(3)
+      border-color: $blue
+
+      .card-body__heading
+        color: $blue
 
     ul
-      list-style-type: none
-      padding: 0
+      list-style-type: decimal
+
       text-align: left
 
     li
       font-size: 1rem
-      text-align: center
+      text-align: left
+
+    img
+      width: 100%
+      object-fit: cover
+
+    h4
+      font-size: 1.2rem
+
+    i
+      float: left
+      font-size: 2rem
+
+  .card-body
+    flex-direction: column
+    width: 100%
+    background: white
+    bottom: 0
 
 
+  .card-body__heading
+    color: $green
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
 
 
   .card__steps
@@ -174,30 +226,11 @@ body
 
 
 .section-timeline
+  position: relative
+  background: url(../images/svg/timeline-bg.svg) no-repeat
 
 .section-timeline__intro
-  position: relative
-  &::before
-    position: absolute
-    top: 0
-    left: 0
-    content: ''
-    display: block
-    width: 300px
-    height: 300px
-    background: url('../images/svg/question/a1.svg') no-repeat center
-    background-size: cover
-
-  &::after
-    position: absolute
-    top: 0
-    right: 0
-    content: ''
-    display: block
-    width: 300px
-    height: 300px
-    background: url('../images/svg/question/a1.svg') no-repeat center
-    background-size: cover
+  justify-content: center
 
 .timeline-nodes
   margin: 5rem 0
@@ -211,12 +244,15 @@ body
   padding: 50px 0
   position: relative
 
-
   h3, p
     color: $primary
 
   h3
     font-weight: bold
+
+  p
+    font-size: .8rem
+
 
   &::before
     content: ""
@@ -706,23 +742,13 @@ body
 
 /*small device style
 @media (max-width: 1107px)
+  .section-timeline__intro
+    justify-content: flex-start
 
   .timeline
     .row
       justify-content: flex-end
 
-  .timeline__slider
-    margin: 3rem 0
-
-  .timeline-nodes
-
-    &:nth-child(odd)
-
-
-    &:nth-child(even)
-
-
-  .timeline
     &::before
       content: ""
       display: block
@@ -732,12 +758,15 @@ body
       z-index: 1
       transform: translateX(-50%)
 
+
+  .timeline__slider
+    margin: 3rem 0
+
   .timeline-image
     position: absolute
     left: 0%
     top: 60px
 
-    /*transform: translateX(-50%;);
 
   .timeline-nodes
     &:nth-child(odd) .timeline-content::after
@@ -770,27 +799,6 @@ body
     min-width: 100px
     min-height: 100px
 
-/*extra small device style
-@media (max-width: 1107px)
+
   .timeline-nodes:nth-child(even)
     justify-content: flex-start
-
-@media (max-width: 575px)
-
-
-
-  .timeline::before
-    content: ""
-    display: block
-    position: absolute
-    top: 0
-    left: 3%
-
-  .timeline-image
-
-    position: absolute
-    left: -5%
-
-    &::before
-      width: 60px
-      height: 60px
