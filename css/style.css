@@ -7329,8 +7329,6 @@ a.text-dark:hover, a.text-dark:focus {
   background: white;
   min-width: 550px;
   border-radius: 5px; }
-  .namecard__item img {
-    max-height: 250px; }
 
 .namecard__item__content {
   text-align: left;
@@ -7749,7 +7747,9 @@ body {
       color: white; }
 
 .tab-pane__list__price {
-  float: right; }
+  float: right;
+  font-weight: bold;
+  letter-spacing: 2px; }
 
 .tab-pane__postscript {
   float: right; }
@@ -7929,14 +7929,15 @@ body {
     height: 100%;
     margin: 0 auto; }
   .big-gallery__item figcaption {
-    color: #EFEEF0;
     font-size: .8rem;
     font-weight: bold;
     letter-spacing: 2px;
     bottom: 8%;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute; }
+    left: 15%;
+    position: absolute;
+    background: #EFEEF0;
+    color: #103D65;
+    padding: .2rem .5rem; }
 
 .btn-default:active .filter-button:active {
   background-color: #42B32F;
