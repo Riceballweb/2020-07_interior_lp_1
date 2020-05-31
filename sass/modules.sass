@@ -1,3 +1,5 @@
+
+
 html, body
   height: 100%
 
@@ -8,29 +10,22 @@ html, body
   transition: .3s
   margin: 0 1rem
 
+.back-to-top
+    cursor: pointer
+    position: fixed
+    bottom: 20px
+    right: 20px
+    display: none
+    background: white
+    color: $primary
+    font-weight: bold
+    transition: .3s
+    border: 0
 
-//
-// .bg-tetris
-//   position: absolute
-//   width: 100%
-//   height: 100%
-//
-//
-// .bg-tetris__block
-//   position: absolute
-//   width: 20%
-//   height: 20%
-//   bottom: 0
-//   background: $red
-//
-// .bg-tetris__triangle
-//   position: absolute
-//   width: 0
-//   height: 0
-//   right: 0
-//   border-style: solid
-//   border-width: 0 98px 169.7px 98px
-//   border-color: transparent transparent #007bff
+    &:hover
+      transform: translateY(-5px)
+      .box-handdraw
+        opacity: 0
 
 .box-handdraw
   position: absolute
@@ -102,14 +97,16 @@ html, body
 
 // contain headings
 .title-box
+  background: white
   position: relative
   padding: 2rem
   margin: 4rem 0
   margin-bottom: 2rem
   display: inline-block
 
+
   &::before
-    z-index: -1
+    z-index: 1
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px
     position: absolute
     top: 1px
@@ -123,7 +120,7 @@ html, body
     opacity: .5
 
   &::after
-    z-index: -1
+    z-index: 1
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px
     position: absolute
     top: 1px
@@ -131,10 +128,11 @@ html, body
     left: -4px
     right: -4px
     display: block
-    border: 5px solid $primary
+    border-bottom: 5px solid $primary
     content: ""
     transform: rotate(.5deg)
     opacity: .9
+
 
   h2, h3
     font-weight: bold
@@ -156,7 +154,6 @@ html, body
   position: relative
   background: $sub
   color: white
-  font-size: 1.7rem
   font-weight: bold
   white-space: nowrap
   width: 100px
@@ -175,14 +172,14 @@ html, body
 
 .namecard__item
   overflow: hidden
-  background: white
+  background: $light-gray
   min-width: 550px
-  max-height: 350px
+  max-height: 300px
   border-radius: $border-radius
+  transition: .3s
 
   img
-    width: 300px
-    height: 100%
+    max-width: 250px
 
 .namecard__item__content
   text-align: left
@@ -194,10 +191,14 @@ html, body
     margin-bottom: 1rem
 
   h3
+    margin: 0
     font-weight: bold
 
   h4
     font-size: 1rem
+
+.slick-current .namecard__item
+  background: white
 
 .feedback-card
 
@@ -212,6 +213,7 @@ html, body
     .feedback-card__top
       color: white
       position: relative
+      border-color: $sub
       background: $sub
 
       &::after
@@ -230,6 +232,7 @@ html, body
   transition: .3s
 
   img
+    max-width: 100px
     margin-right: 1rem
 
   h3
@@ -247,6 +250,7 @@ html, body
   time
 
 .feedback-card__top
+  border-bottom: 1px solid $primary
   padding: 1rem 1rem
   margin-bottom: 1.5rem
   transition: .3s
@@ -257,9 +261,9 @@ html, body
     content: ''
     display: block
     border-style: solid
-    border-width: 25px 25px 0 25px
+    border-width: 30px 30px 0 30px
     border-color: $sub transparent transparent transparent
-    transition: .7s
+    transition: .1s
     opacity: 0
 
 .feedback-card__body
@@ -278,7 +282,7 @@ html, body
 //mark
 mark, .mark
   font-weight: bold
-  padding: 0.2em
+  padding: 0.2em 0
   color: $sub
   background-color: transparent
 

@@ -1,6 +1,18 @@
 $( document ).ready(function() {
 
 
+
+//Datetimepicker
+$.datetimepicker.setLocale('ch');
+$('#datetimepicker').datetimepicker({
+step: 60,
+minDate:'-2020/01/00',
+maxDate:'+1970/04/01',
+minTime: '10:00',
+maxTime: '22:00',
+});
+
+// Form
   var $form = $("form.form-distribution");
   loadLocation({
     city: {
@@ -65,8 +77,8 @@ var chart = new Chart(ctx, {
         labels: ['一居室 60㎡', '二居室 90㎡', '三居室 180㎡', '四居室 350㎡', '獨棟別墅 600㎡'],
         datasets: [{
             label: '新台幣(萬元)',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'rgb(2, 136, 209)',
+            borderColor: 'rgb(2, 136, 209)',
             data: [36, 54, 108, 210, 360, ],
             labels: ['1', '2', '33', 'April', 'May', 'June'],
         }]
@@ -136,7 +148,7 @@ $(this).addClass("active");
 
     responsive: [
       {
-        breakpoint: 868,
+        breakpoint: 1100,
         settings: {
           arrows: false,
           centerMode: true,

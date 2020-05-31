@@ -1,0 +1,57 @@
+
+/*small device style
+@media (max-width: 1107px)
+  .section-timeline__intro
+    justify-content: flex-start
+
+  .timeline
+    .row
+      justify-content: flex-end
+
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      top: 0
+      left: 4%
+      z-index: 1
+      transform: translateX(-50%)
+
+
+  .timeline__slider
+    margin: 3rem 0
+
+  .timeline-image
+    position: absolute
+    left: -5%
+    top: 60px
+
+
+  .timeline-nodes
+    margin: 0
+    &:nth-child(odd) .timeline-content::after
+      content: ""
+      position: absolute
+      top: 5%
+      left: auto
+      right: 100%
+      width: 0
+      border-left: 0
+      border-right: 10px solid $primary
+      border-top: 10px solid transparent
+      border-bottom: 10px solid transparent
+
+    &:nth-child(even)
+      .timeline-content::after
+        content: ""
+        position: absolute
+        top: 5%
+        right: 100%
+        width: 0
+        border-right: 10px solid $primary
+        border-top: 10px solid transparent
+        border-bottom: 10px solid transparent
+
+@media (max-width: $breakpoint-md)
+  .timeline::before
+    display: none

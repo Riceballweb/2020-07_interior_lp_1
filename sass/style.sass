@@ -8,21 +8,8 @@
 
 @import "sass/slick-theme"
 
-.back-to-top
-    cursor: pointer
-    position: fixed
-    bottom: 20px
-    right: 20px
-    display: none
-    background: white
-    color: $primary
-    font-weight: bold
-    transition: .3s
 
-    &:hover
-      transform: translateY(-5px)
-      .box-handdraw
-        opacity: 0
+
 
 html
   overflow-x: hidden
@@ -31,6 +18,7 @@ body
   font-family: 'Noto Sans TC', sans-serif
   color: $primary
   line-height: 1.8
+  font-size: 20px
 
 
 .section-hero
@@ -97,7 +85,6 @@ body
 
 .section-question
   margin-top: -5rem
-  margin-bottom: 5rem
 
   .container
     position: relative
@@ -114,29 +101,51 @@ body
 .section-question__img
   z-index: 60
   margin-top: -10%
+  max-width: 350px
 
 .card-deck--question
   .card
     min-width: 300px
+    padding: 1rem
+
+    h3
+      font-size: 1.5rem
+      position: relative
+
+
+      padding: .8rem
+
+
+
 
 
     h4
+      font-weight: bold
       letter-spacing: 1px
       font-size: 1.3rem
 
+    p
+      font-size: .9rem
+
     img
+      max-width: 150px
+      margin: 0 auto
       margin-top: 2rem
       animation: flying 1s ease 0s infinite alternate
 
-    img:nth-of-type(2)
-      outline: 10px solid red
+
+    .card-title
+      margin-top: 1rem
+
+    .card-body
+      background: white
 
 .section-answer
   padding-bottom: 5rem
+
   .title-box
     &::before
       display: none
-
     &::after
       display: none
 
@@ -144,36 +153,48 @@ body
   width: 100%
   margin: 0 auto
   text-align: center
-  margin-bottom: -3rem
+  margin-bottom: -5rem
 
 .card__answer
-  max-width: 1200px
+  justify-content: center
   margin: 0 auto
 
   .card
     text-align: left
     overflow: hidden
     background: white
-    min-width: 10rem
-    max-width: 15rem
-
-    margin: 0 2rem
+    min-width: 350px
+    max-width: 400px
+    width: 100%
+    margin: 1rem
     border: 3px solid red
 
     &:nth-of-type(1)
       border-color: $green
 
+      hr
+        background-color: $green
+
     &:nth-of-type(2)
       border-color: $red
       transform: translateY(-30px)
+
       .card-body__heading
         color: $red
+
+      hr
+        background-color: $red
+
 
     &:nth-of-type(3)
       border-color: $blue
 
       .card-body__heading
         color: $blue
+
+      hr
+        background-color: $blue
+
 
     ul
       list-style-type: decimal
@@ -192,8 +213,9 @@ body
       font-size: 1.2rem
 
     i
+      margin-right: .6rem
       float: left
-      font-size: 2rem
+      font-size: 2em
 
   .card-body
     flex-direction: column
@@ -218,10 +240,11 @@ body
     max-width: 150px
     transform: rotate(-10deg)
 
-    h4
-      display: inline-block
-      border-bottom: 2px solid red
-
+@media (max-width: 991px)
+  .card__answer
+    .card
+      &:nth-of-type(2)
+        transform: none
 
 
 
@@ -289,7 +312,7 @@ body
   flex-wrap: nowrap
   z-index: 1
   border: 0
-  top: -40px
+  top: -50px
   position: absolute
 
   @media (max-width: 570px)
@@ -328,6 +351,7 @@ body
       color: white
 
 .tab-pane__list__price
+
   float: right
   font-weight: bold
   letter-spacing: 2px
@@ -399,7 +423,7 @@ body
     margin-top: -10px
     color: white
     position: relative
-    font-size: 2rem
+    font-size: 1.8rem
     font-weight: bold
 
     &::before
@@ -433,6 +457,7 @@ body
 
   figcaption
     margin: .3rem 0
+    font-size: .8rem
 
 .section-prove
   position: relative
@@ -442,6 +467,7 @@ body
   background-size: cover
 
 .section-data
+  margin-top: 4rem
   position: relative
 
   &::before
@@ -462,8 +488,8 @@ body
   .card
     overflow: hidden
     background: white
-    min-width: 200px
-    margin: 1rem
+    min-width: 230px
+    margin: .5rem
     color: $primary
     border: .3rem solid $primary
 
@@ -475,7 +501,6 @@ body
     padding: 1rem 0
     background: $primary
     color: white
-    font-size: 2rem
     font-weight: bold
 
   h4
@@ -504,6 +529,7 @@ body
   .title-box
     margin: 0
     color: white
+    background: none
 
     &::before
       display: none
@@ -532,8 +558,7 @@ body
     margin: 0 auto
 
   figcaption
-
-    font-size: .8rem
+    font-size: .7rem
     font-weight: bold
     letter-spacing: 2px
     bottom: 8%
@@ -612,15 +637,16 @@ body
 
 
 .section-video
-
+  padding: 4rem 0
 .video-content
   h3
+
     position: relative
     font-weight: bold
 
     &::before
       content: ''
-      top: 5px
+      top: 10%
       left: -30px
       position: absolute
       display: block
@@ -680,29 +706,74 @@ body
   color: $light
 
   .title-box
+    background: none
     width: 100%
     text-align: left
     margin: 1rem 0
     padding: 0
     margin-top: 2rem
 
+    &::before, &::after
+      display: none
+
+.card-deck--signup
+  text-align: center
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+  img
+    float: left
+    max-width: 150px
+
+  .card
+    margin: 0
+    text-align: left
+    width: 100%
+
   .title-box h2, .title-box h3
     color: $light
 
   .card
+    flex-direction: row
     min-width: 8rem
 
+  .card-body
 
+
+// Form
 .form-signup
   background: white
   color: $primary
   padding: 2rem
-  margin-top: 2rem
+  margin-top: 4rem
   border-radius: $border-radius $border-radius 0 0
 
   h3
     font-weight: bold
     font-size: 2rem
+
+.datetimepicker
+  background: transparent
+  color: $primary
+
+.form-submit
+  background: $sub
+  font-weight: bold
+  border: 0
+
+.form-check-input
+  position: static
+  margin-right: .2rem
+
+.form-check
+  a
+    color: $sub
+    font-weight: bold
+    margin-left: .5rem
+
+.error
+  color: $red
 
 .section-feedback
   padding-bottom: 4rem
@@ -716,7 +787,7 @@ body
     margin: 0
 
 .footer__logo
-  margin-bottom: 2rem
+  margin-bottom: 1rem
   img
     min-width: 250px
 
@@ -740,60 +811,6 @@ body
     justify-content: space-around
 
 
-/*small device style
-@media (max-width: 1107px)
-  .section-timeline__intro
-    justify-content: flex-start
-
-  .timeline
-    .row
-      justify-content: flex-end
-
-    &::before
-      content: ""
-      display: block
-      position: absolute
-      top: 0
-      left: 4%
-      z-index: 1
-      transform: translateX(-50%)
-
-
-  .timeline__slider
-    margin: 3rem 0
-
-  .timeline-image
-    position: absolute
-    left: 0%
-    top: 60px
-
-
-  .timeline-nodes
-    &:nth-child(odd) .timeline-content::after
-      content: ""
-      position: absolute
-      top: 5%
-      left: auto
-      right: 100%
-      width: 0
-      border-left: 0
-      border-right: 10px solid $primary
-      border-top: 10px solid transparent
-      border-bottom: 10px solid transparent
-
-    &:nth-child(even)
-      .timeline-content::after
-        content: ""
-        position: absolute
-        top: 5%
-        right: 100%
-        width: 0
-        border-right: 10px solid $primary
-        border-top: 10px solid transparent
-        border-bottom: 10px solid transparent
-
-      .timeline-date
-        text-align: left
 
   .timeline-image::before
     min-width: 100px
@@ -802,3 +819,5 @@ body
 
   .timeline-nodes:nth-child(even)
     justify-content: flex-start
+
+@import "sass/media"

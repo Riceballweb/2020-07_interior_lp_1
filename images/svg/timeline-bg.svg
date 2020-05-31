@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1200 500" style="enable-background:new 0 0 1200 500;" xml:space="preserve">
+	 viewBox="302 170.9 1200 500" style="enable-background:new 302 170.9 1200 500;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#EF6C00;}
-	.st1{fill:#689F38;}
-	.st2{fill:#D32F2F;}
-	.st3{fill:#0288D1;}
+	.st1{fill:#D32F2F;}
+	.st2{fill:#0288D1;}
 </style>
-<polygon id="XMLID_1_" class="st0" points="199.4,353.4 242.7,278.4 286,353.4 "/>
-<polygon id="XMLID_3_" class="st0" points="58,345.9 102.9,333.8 90.9,378.8 "/>
-<polygon id="XMLID_4_" class="st0" points="131.1,258 189.9,196.9 213.4,278.4 "/>
-<polygon id="XMLID_7_" class="st0" points="876.6,255.6 833.3,180.6 790,255.6 "/>
-<polygon id="XMLID_6_" class="st1" points="1135.3,345.9 1090.4,333.8 1102.4,378.8 "/>
-<polygon id="XMLID_5_" class="st0" points="1062.1,258 1003.4,196.9 979.9,278.4 "/>
-<rect id="XMLID_2_" x="251" y="87" class="st2" width="40" height="40"/>
-<circle id="XMLID_8_" class="st3" cx="66.7" cy="96" r="39.7"/>
-<circle id="XMLID_10_" class="st3" cx="916.2" cy="107" r="39.7"/>
+<polygon id="XMLID_3_" class="st0" points="360,516.8 404.9,504.7 392.9,549.7 "/>
+<polygon id="XMLID_11_" class="st0" points="321,617.4 345.9,610.7 339.2,635.7 "/>
+<polygon id="XMLID_12_" class="st0" points="1273.4,528.7 1255.7,485.7 1301.9,492 "/>
+<polygon id="XMLID_1_" class="st0" points="1378.1,554.8 1368.3,530.9 1393.9,534.4 "/>
+<polygon id="XMLID_4_" class="st0" points="433.1,428.9 491.9,367.8 515.4,449.3 "/>
+<polygon id="XMLID_7_" class="st0" points="1178.6,426.5 1135.3,351.5 1092,426.5 "/>
+<rect id="XMLID_2_" x="553" y="257.9" class="st1" width="40" height="40"/>
+<rect id="XMLID_9_" x="1264" y="380.9" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 1908.453 1592.2872)" class="st1" width="40" height="40"/>
+<circle id="XMLID_8_" class="st2" cx="368.7" cy="266.9" r="39.7"/>
+<circle id="XMLID_10_" class="st2" cx="1278.8" cy="257.9" r="77.2"/>
 </svg>
