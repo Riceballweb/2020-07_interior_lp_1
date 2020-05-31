@@ -102,6 +102,9 @@ body
   z-index: 60
   margin-top: -10%
   max-width: 350px
+  height: 350px
+  animation: rotate 1s linear 0s infinite alternate
+
 
 .card-deck--question
   .card
@@ -512,7 +515,7 @@ body
     font-size: 1.2rem
 
 .section-gallery
-
+  margin-top: 3rem
   .container-fluid
     position: relative
     &::after
@@ -527,14 +530,10 @@ body
       background: $sub
 
   .title-box
-    margin: 0
-    color: white
-    background: none
+    margin-top: -4%
 
-    &::before
-      display: none
-    &::after
-      display: none
+
+
 
 .gallery-filter__btn
   min-width: 90px
@@ -722,11 +721,12 @@ body
   justify-content: center
   align-items: center
 
-  img
-    float: left
-    max-width: 150px
+  i
+    font-size: 180%
 
   .card
+    justify-content: center
+    align-items: center
     margin: 0
     text-align: left
     width: 100%
@@ -738,11 +738,11 @@ body
     flex-direction: row
     min-width: 8rem
 
-  .card-body
 
 
 // Form
 .form-signup
+
   background: white
   color: $primary
   padding: 2rem
@@ -787,9 +787,10 @@ body
     margin: 0
 
 .footer__logo
+
   margin-bottom: 1rem
   img
-    min-width: 250px
+    min-width: 300px
 
 .social
   margin: 0 2rem

@@ -135,7 +135,10 @@ $(this).addClass("active");
    speed: 300,
    slidesToShow: 1,
    variableWidth: true,
-   centerMode: true
+   centerMode: true,
+
+
+
   });
 
   $('.big-gallery').slick({
@@ -145,6 +148,8 @@ $(this).addClass("active");
     centerPadding: '0px',
     slidesToShow: 3,
     infinite: true,
+
+
 
     responsive: [
       {
@@ -165,6 +170,8 @@ $(this).addClass("active");
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
+
+
 });
 
 $('.feedback-card').slick({
@@ -175,6 +182,7 @@ $('.feedback-card').slick({
  slidesToShow: 1,
  variableWidth: true,
  centerMode: true,
+
 
 });
 
