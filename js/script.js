@@ -86,9 +86,17 @@ var chart = new Chart(ctx, {
 
     // Configuration options go here
     options: {
+        tooltips: {
+            enabled: true,
+            mode: 'single',
+            callbacks: {
+                label: function(tooltipItems, data) {
+                    return '新台幣：' + tooltipItems.yLabel + '萬元';
+                }
+            }
+        },
+ }
 
-
-    }
 });
 
 //
@@ -130,6 +138,8 @@ $(this).addClass("active");
 
   $('.namecard').slick({
    arrows: false,
+   autoplay: true,
+   autoplaySpeed: 2000,
    dots: false,
    infinite: true,
    speed: 300,
@@ -142,6 +152,8 @@ $(this).addClass("active");
   });
 
   $('.big-gallery').slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
     centerMode: true,
     arrows: true,
     dots: true,
@@ -167,6 +179,8 @@ $(this).addClass("active");
 
   $('.lazy').slick({
   lazyLoad: 'ondemand',
+  autoplay: true,
+  autoplaySpeed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
@@ -176,6 +190,8 @@ $(this).addClass("active");
 
 $('.feedback-card').slick({
  arrows: false,
+ autoplay: true,
+ autoplaySpeed: 2000,
  dots: true,
  infinite: true,
  speed: 300,

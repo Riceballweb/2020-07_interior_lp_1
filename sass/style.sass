@@ -26,8 +26,8 @@ body
   height: 100vh
   color: white
 
-
-  .jumbotron
+  .jumbotron-fluid
+    text-align: center
     background-color: transparent
     display: flex
     align-items: center
@@ -42,6 +42,27 @@ body
       height: 100%
       background: black
       opacity: .7
+
+    h1
+      margin: 0 auto
+      max-width: 800px
+      width: 100%
+      height: 500px
+      background: url(../images/svg/hero.svg) no-repeat center
+
+
+
+    h2
+
+
+      margin: 0 auto
+      padding: 1rem
+      font-size: 100%
+
+.hero-btn-group
+  max-width: 600px
+  margin: 1rem auto
+
 
 .videoContainer
   z-index: -1
@@ -84,13 +105,14 @@ body
       background: url(../images/svg/icon-checked.svg) no-repeat center
 
 .section-question
-  margin-top: -5rem
 
-  .container
-    position: relative
 
   .title-box
+    border: 0
+    border-radius: $border-radius
     margin: 0
+    background: $sub
+    color: white
 
     &::before
       display: none
@@ -99,11 +121,17 @@ body
       display: none
 
 .section-question__img
-  z-index: 60
-  margin-top: -10%
-  max-width: 350px
-  height: 350px
-  animation: rotate 1s linear 0s infinite alternate
+  position: relative
+
+
+  img
+    position: relative
+    z-index: 60
+    max-width: 350px
+    height: 350px
+    animation: rotate 1s linear 0s infinite alternate
+
+
 
 
 .card-deck--question
@@ -473,6 +501,8 @@ body
   margin-top: 4rem
   position: relative
 
+
+
   &::before
     content: ''
     position: absolute
@@ -516,6 +546,7 @@ body
 
 .section-gallery
   margin-top: 3rem
+
   .container-fluid
     position: relative
     &::after
@@ -529,9 +560,9 @@ body
       height: 80%
       background: $sub
 
-  .title-box
-    margin-top: -4%
+@media (max-width: $breakpoint-lg)
 
+  .section-gallery .title-box
 
 
 
@@ -592,9 +623,8 @@ body
     width: 100%
     height: 100%
     background: black
-    opacity: .2
+    opacity: 0
     transition: .3s
-
 
   &:hover
     &::before
@@ -602,7 +632,6 @@ body
 
     .gallery_product__content
       opacity: 1
-
 
   img
     width: 100%
@@ -625,10 +654,12 @@ body
   text-align: center
 
   h4
+    font-size: 1.2rem
     white-space: nowrap
     font-weight: bold
 
   h5
+    font-size: 1rem
     letter-spacing: 2px
     font-size: 1rem
 
@@ -742,7 +773,6 @@ body
 
 // Form
 .form-signup
-
   background: white
   color: $primary
   padding: 2rem
@@ -768,6 +798,7 @@ body
 
 .form-check
   a
+    text-decoration: underline
     color: $sub
     font-weight: bold
     margin-left: .5rem
