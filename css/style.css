@@ -7235,7 +7235,7 @@ html, body {
   transition: .3s;
   border: 0; }
   .back-to-top:hover {
-    color: #f88132;
+    color: #f9e153;
     transform: translateY(-5px); }
 
 .box-handdraw {
@@ -8063,12 +8063,13 @@ body {
     font-size: .7rem;
     font-weight: bold;
     letter-spacing: 2px;
-    bottom: 8%;
+    bottom: 6%;
     left: 15%;
     position: absolute;
     background: #F9F9F9;
     color: #103D65;
-    padding: .2rem .5rem; }
+    padding: .2rem .5rem;
+    box-shadow: 0.1rem 0.2rem #f88132; }
 
 .btn-default:active .filter-button:active {
   background-color: #42B32F;
