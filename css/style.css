@@ -7311,15 +7311,16 @@ html, body {
   background: white;
   border: 0.2rem solid #103D65;
   box-shadow: 0.3rem 0.5rem #103D65; }
-  .title-box::before {
-    z-index: -1;
+  .title-box::after {
     content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
     position: absolute;
-    bottom: -.5rem;
-    right: -.5rem; }
+    bottom: -15%;
+    left: 10%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 1rem 1rem 0 1rem;
+    border-color: #103D65 transparent transparent transparent; }
   .title-box h2, .title-box h3 {
     z-index: 10;
     display: inline-block;
@@ -7622,7 +7623,7 @@ body {
       opacity: .7; }
     .section-hero .jumbotron-fluid h1 {
       margin: 0 auto;
-      max-width: 800px;
+      max-width: 1000px;
       width: 100%;
       height: 500px;
       background: url(../images/svg/hero.svg) no-repeat center; }
@@ -7973,6 +7974,7 @@ body {
     object-fit: cover;
     max-height: 260px; }
   .timeline__slider__figure figcaption {
+    position: relative;
     margin: .3rem 0;
     font-size: .8rem; }
 
@@ -8057,6 +8059,7 @@ body {
     height: 100%;
     margin: 0 auto; }
   .big-gallery__item figcaption {
+    position: relative;
     font-size: .7rem;
     font-weight: bold;
     letter-spacing: 2px;
@@ -8201,6 +8204,8 @@ body {
   .card-deck--signup i {
     font-size: 180%; }
   .card-deck--signup .card {
+    flex-direction: row;
+    min-width: 8rem;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -8208,9 +8213,6 @@ body {
     width: 100%; }
   .card-deck--signup .title-box h2, .card-deck--signup .title-box h3 {
     color: #F9F9F9; }
-  .card-deck--signup .card {
-    flex-direction: row;
-    min-width: 8rem; }
 
 .form-signup {
   background: white;
