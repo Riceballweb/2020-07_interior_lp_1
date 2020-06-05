@@ -8238,11 +8238,13 @@ body {
   position: static;
   margin-right: .2rem; }
 
-.form-check a {
-  text-decoration: underline;
-  color: #f88132;
-  font-weight: bold;
-  margin-left: .5rem; }
+.form-check {
+  font-size: .8rem; }
+  .form-check a {
+    text-decoration: underline;
+    color: #f88132;
+    font-weight: bold;
+    margin-left: .5rem; }
 
 .error {
   color: #D32F2F; }
