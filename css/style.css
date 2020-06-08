@@ -7308,6 +7308,7 @@ html, body {
   margin-bottom: 2rem;
   display: inline-block;
   padding: 2rem;
+  margin-bottom: 3%;
   background: white;
   border: 0.2rem solid #103D65;
   box-shadow: 0.3rem 0.5rem #103D65; }
@@ -7982,8 +7983,8 @@ body {
   position: relative;
   margin-top: -60px;
   padding: 5rem 0;
-  background: url(../images/sectionbg-prove.jpg) no-repeat bottom;
-  background-size: cover; }
+  background: linear-gradient(90deg, #F9F9F9 21px, transparent 1%) center, linear-gradient(#F9F9F9 21px, transparent 1%) center, #103D65;
+  background-size: 22px 22px; }
 
 .section-data {
   margin-top: 4rem;
@@ -8187,38 +8188,46 @@ body {
 .section-signup {
   background: #103D65;
   color: #F9F9F9; }
+  .section-signup .container-fluid, .section-signup .container-sm, .section-signup .container-md, .section-signup .container-lg, .section-signup .container-xl {
+    max-width: 1300px; }
   .section-signup .title-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
     background: none;
-    width: 100%;
-    text-align: left;
-    margin: 1rem 0;
-    padding: 0;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    background: #103D65;
     margin-top: 2rem; }
     .section-signup .title-box::before, .section-signup .title-box::after {
       display: none; }
 
+.joined-box {
+  max-width: 250px;
+  margin: 0 auto; }
+
 .card-deck--signup {
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  max-width: 700px;
+  margin: 0 auto; }
   .card-deck--signup i {
     font-size: 180%; }
   .card-deck--signup .card {
-    flex-direction: row;
-    min-width: 8rem;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    text-align: left;
-    width: 100%; }
+    min-width: 200px;
+    border: .2rem solid white;
+    text-align: center;
+    width: 95%;
+    padding: .5rem;
+    margin: .5rem; }
   .card-deck--signup .title-box h2, .card-deck--signup .title-box h3 {
     color: #F9F9F9; }
 
 .form-signup {
+  max-width: 600px;
   background: white;
   color: #103D65;
   padding: 2rem;
+  margin: 0 auto;
   margin-top: 4rem;
   border-radius: 5px 5px 0 0; }
   .form-signup h3 {

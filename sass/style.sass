@@ -495,14 +495,12 @@ body
   position: relative
   margin-top: -60px
   padding: 5rem 0
-  background: url(../images/sectionbg-prove.jpg) no-repeat bottom
-  background-size: cover
+  background: linear-gradient(90deg, $light 21px, transparent 1%) center, linear-gradient($light 21px, transparent 1%) center, $primary
+  background-size: 22px 22px
 
 .section-data
   margin-top: 4rem
   position: relative
-
-
 
   &::before
     content: ''
@@ -738,45 +736,53 @@ body
   background: $primary
   color: $light
 
+  .container-fluid
+    max-width: 1300px
+
   .title-box
+    display: flex
+    flex-direction: column
+    max-width: 600px
     background: none
-    width: 100%
-    text-align: left
-    margin: 1rem 0
-    padding: 0
+    text-align: center
+    margin: 1rem auto
+    padding: 1rem
+    background: $primary
     margin-top: 2rem
 
     &::before, &::after
       display: none
 
+.joined-box
+  max-width: 250px
+  margin: 0 auto
+
 .card-deck--signup
-  text-align: center
-  flex-direction: column
-  justify-content: center
-  align-items: center
+  max-width: 700px
+  margin: 0 auto
+
 
   i
     font-size: 180%
 
   .card
-    flex-direction: row
-    min-width: 8rem
-    justify-content: center
-    align-items: center
-    margin: 0
-    text-align: left
-    width: 100%
+    min-width: 200px
+    border: .2rem solid white
+    text-align: center
+    width: 95%
+    padding: .5rem
+    margin: .5rem
 
   .title-box h2, .title-box h3
     color: $light
 
-
-
 // Form
 .form-signup
+  max-width: 600px
   background: white
   color: $primary
   padding: 2rem
+  margin: 0 auto
   margin-top: 4rem
   border-radius: $border-radius $border-radius 0 0
 
