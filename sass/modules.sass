@@ -1,5 +1,5 @@
-html, body
-  height: 100%
+@mixin hard-shadow
+  box-shadow: .3rem .5rem $primary
 
 .opacity-2
   opacity: .4
@@ -8,21 +8,40 @@ html, body
   transition: .3s
   margin: 0 1rem
 
-.back-to-top
-    cursor: pointer
-    position: fixed
-    bottom: 20px
-    right: 20px
-    display: none
-    background: $primary
-    color: white
-    font-weight: bold
-    transition: .3s
-    border: 0
+.fixed-top
 
-    &:hover
-      color: $yellow
-      transform: translateY(-5px)
+.form-shortcut, .back-to-top
+  cursor: pointer
+  position: absolute
+  display: none
+  opacity: .8
+  color: $primary
+  font-weight: bold
+  transition: .3s
+  background: transparent
+  background: white
+  border: 2px solid $primary
+
+  &:hover
+    opacity: 1
+    color: $yellow
+    transform: translateY(-5px)
+
+.back-to-top
+  position: fixed
+  bottom: 20px
+  right: 20px
+
+
+  &:hover
+    color: $yellow
+    transform: translateY(-5px)
+
+.form-shortcut
+  position: fixed
+  bottom: 20px
+  right: 80px
+  color: $primary
 
 
 .box-handdraw
@@ -103,7 +122,7 @@ html, body
   margin-bottom: 3%
   background: white
   border: .2rem solid $primary
-  box-shadow: .3rem .5rem $primary
+  +hard-shadow
 
   &::after
     content: ''
@@ -255,17 +274,17 @@ html, body
     border-style: solid
     border-width: 30px 30px 0 30px
     border-color: $sub transparent transparent transparent
-    transition: .1s
+    transition: .3s
     opacity: 0
+
+
+
 
 .feedback-card__body
   margin: 1rem
 
 .feedback-card__rating
-  fill: $sub
-
-
-
+  color: $sub
 
 //
 // Bootstrap overwrite

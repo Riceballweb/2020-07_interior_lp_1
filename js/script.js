@@ -77,8 +77,8 @@ var chart = new Chart(ctx, {
         labels: ['一居室 60㎡', '二居室 90㎡', '三居室 180㎡', '四居室 350㎡', '獨棟別墅 600㎡'],
         datasets: [{
             label: '新台幣(萬元)',
-            backgroundColor: 'rgb(2, 136, 209)',
-            borderColor: 'rgb(2, 136, 209)',
+            backgroundColor: 'rgb(248, 129, 50)',
+
             data: [36, 54, 108, 210, 360, ],
             labels: ['1', '2', '33', 'April', 'May', 'June'],
         }]
@@ -209,8 +209,10 @@ $('.feedback-card').slick({
 $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
             $('#back-to-top').fadeIn();
+            $('#form-shortcut').fadeIn();
         } else {
             $('#back-to-top').fadeOut();
+            $('#form-shortcut').fadeOut();
         }
     });
     // scroll body to 0px on click
@@ -223,6 +225,8 @@ $(window).scroll(function () {
     });
 
     $('#back-to-top').tooltip('show');
+
+
 
 
 
