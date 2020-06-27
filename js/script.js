@@ -1,6 +1,8 @@
 $( document ).ready(function() {
 
-
+  window.FontAwesomeConfig = {
+    searchPseudoElements: true
+  }
 
 //Datetimepicker
 $.datetimepicker.setLocale('ch');
@@ -78,7 +80,7 @@ var chart = new Chart(ctx, {
         datasets: [{
             label: '新台幣(萬元)',
             backgroundColor: 'rgb(248, 129, 50)',
-            borderColor: 'rgb(16, 61, 101)',
+            borderColor: 'rgb(248, 129, 50)',
             data: [36, 54, 108, 210, 360, ],
             labels: ['1', '2', '33', 'April', 'May', 'June'],
         }]

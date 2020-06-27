@@ -1,6 +1,5 @@
 @charset "UTF-8"
 @import "sass/variable"
-@import "sass/movingBg"
 @import "node_modules/bootstrap/scss/bootstrap"
 @import "sass/bootstrap-rfs"
 @import "sass/modules"
@@ -11,6 +10,7 @@ html, body
   height: 100%
 
 html
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0
   overflow-x: hidden
 
 body
@@ -69,32 +69,6 @@ body
     width: 100%
     height: 100%
 
-
-.hero-list
-  font-size: 1.1rem
-  letter-spacing: 2px
-  list-style-type: none
-  margin-left: 20px
-  padding: 0
-
-  li
-
-    font-size: calc(.8rem + 0.1vw)
-    position: relative
-    display: inline-block
-    margin-right: 2rem
-
-    &::before
-      content: ''
-      position: absolute
-      display: inline-block
-      top: 50%
-      left: -20px
-      transform: translateY(-50%)
-      width: 15px
-      height: 15px
-      background: url(../images/svg/icon-checked.svg) no-repeat center
-
 .section-question
   padding-bottom: 4rem
   &::before
@@ -130,126 +104,111 @@ body
     height: 350px
     animation: rotate 1s linear 0s infinite alternate
 
-.card-deck--question
-  .card
-    min-width: 300px
-    padding: 1rem
+.card__question
+  min-width: 300px
+  padding: 1rem
 
-    h3
-      font-size: 1.5rem
-      position: relative
-      padding: .8rem
+  h3
+    font-weight: bold
+    max-width: 50%
+    font-size: 1.2rem
+    position: relative
+    padding: .5rem
+    background: $primary
+    color: white
+    transform: translateY(10px)
+    border-radius: $border-radius $border-radius 0 0
 
-    h4
-      font-weight: bold
-      letter-spacing: 1px
-      font-size: 1.3rem
+  h4
+    font-weight: bold
+    letter-spacing: 1px
+    font-size: 1.3rem
+    margin-top: 1rem
 
-    p
-      font-size: .9rem
+  p
+    font-size: .9rem
 
+  img
+    z-index: 10
+    max-width: 150px
+    margin: 0 auto
+    margin-top: 2rem
+    animation: flying 1s ease .8s infinite alternate
+
+  &:nth-of-type(2)
     img
-      max-width: 150px
-      margin: 0 auto
-      margin-top: 2rem
-      animation: flying 1s ease 0s infinite alternate
+      animation: flying 1s ease 1s infinite alternate
 
+  .card-body
+    border: 3px solid $primary
+    background: white
 
-    .card-title
-      margin-top: 1rem
-
-    .card-body
-      background: white
+.card__question__img
+  &::after
+    z-index: 1
+    content: ''
+    display: block
+    top: 10%
+    left: 10%
+    position: absolute
+    width: 150px
+    height: 150px
+    background: $sub
+    border-radius: 50%
 
 .section-answer
   padding-bottom: 5rem
 
   .title-box
-    &::before
-      display: none
+    margin-bottom: 7rem
+
+.card__answer
+  min-width: 300px
+  border: 3px solid $primary
+  background: $light
+
+  &:nth-of-type(2)
+    transform: scale(1.1)
+
+  h3
+    font-weight: bold
+    margin: 0
+
+  h4
+    font-size: 1rem
+
+  ul
+    padding: 0
+    list-style-type: none
+
+  li
+
+    position: relative
+    display: block
+    margin: 1rem 0
+
+
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: -15px
+      left: 50%
+      transform: translate(-50%)
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 5px 5px 0 5px
+      border-color: $primary transparent transparent transparent
+
+  li:last-of-type()
     &::after
       display: none
 
-.section-answer__intro
-  width: 100%
-  margin: 0 auto
-  text-align: center
-  margin-bottom: -5rem
-
-.card__answer
-  justify-content: center
-  margin: 0 auto
-  margin-top: 6rem
-
-  .card
-    text-align: left
-    overflow: hidden
-    background: white
-    min-width: 350px
-    max-width: 400px
-    width: 100%
-    margin: 1rem
-
-    &:nth-of-type(2)
-      transform: translateY(-30px)
-
-
-    &:nth-of-type(3)
-
-    ul
-      list-style-type: decimal
-
-      text-align: left
-
-    li
-      font-size: 1rem
-      text-align: left
-
-    img
-      width: 100%
-      object-fit: cover
-
-    h4
-      font-size: 1.2rem
-
-    i
-      color: $sub
-      margin-right: .6rem
-      float: left
-      font-size: 2em
-
-  .card-body
-    flex-direction: column
-    width: 100%
-    background: white
-    bottom: 0
-    padding: 0
-
-
-  .card-body__heading
-    border-top: .2rem solid $sub
-    color: $primary
-    padding: 1rem
-    width: 100%
-    display: flex
-    justify-content: space-around
-    align-items: center
-
-
-  .card__steps
-    z-index: 50
-    position: absolute
-    top: -10%
-    left: -10%
-    max-width: 150px
-    transform: rotate(-10deg)
-
 @media (max-width: 991px)
   .card__answer
-    .card
-      &:nth-of-type(2)
-        transform: none
-
+    &:nth-of-type(2)
+      transform: none
 
 
 .section-timeline
@@ -512,9 +471,9 @@ body
     overflow: hidden
     background: white
     min-width: 230px
-    margin: .5rem
+    margin: .8rem
     color: $primary
-    border: .3rem solid $primary
+    border: .2rem solid $primary
 
   .card-body
     padding: 0
@@ -724,47 +683,104 @@ body
   max-width: 60px
 
 .section-signup
+  margin-top: -3rem
   background: $primary
   color: $light
 
   .container-fluid
-    max-width: 1300px
+    max-width: 1500px
 
   .title-box
-    display: flex
-    flex-direction: column
-    max-width: 600px
-    background: none
+    padding: 0
+    position: relative
+    margin: 0
     text-align: center
-    margin: 1rem auto
-    padding: 1rem
-    background: $primary
-    margin-top: 2rem
+    width: 100%
+    margin-top: -2rem
+    color: $primary
+    border-radius: $border-radius
 
     &::before, &::after
       display: none
 
-.joined-box
-  max-width: 250px
-  margin: 0 auto
 
-.card-deck--signup
+.joined-box
+  top: -80px
+  left: 0
+  padding: .2rem 1rem
+  position: absolute
+  display: inline-block
+  margin: 0 auto
+  margin-top: 1rem
+  color: $sub
+  background: white
+  transform: rotate(-5deg)
+
+  span
+    font-size: 2rem
+
+
+
+
+.card-deck__signup
   max-width: 700px
   margin: 0 auto
+
+  .card
+    z-index: 2
+    background: white
+    min-width: 250px
+    text-align: center
+    width: 95%
+    padding: 1rem
+    margin: .5rem
+    border-color: white
+    border: 2px solid rgba(255, 255, 255, 0.4)
+    color: $primary
+
+    opacity: .9
+    transition: .3s
+
+    &:hover
+      opacity: 1
+
+    &:nth-of-type(3)
+      z-index: 1
+
+  .card-body
+    z-index: 1
+    padding: 0
+
+    h4
+      margin: 0
+      margin: 1rem 0 .5rem 0
+
+  .title-box h2, .title-box h3
+    color: $light
+
+
+.card-deck-icon__signup
+  margin: .6rem
+  position: relative
+
+
+  &::before
+    z-index: -1
+    content: ''
+    display: inline-block
+    top: -150%
+    left: 50%
+    transform: translate(-50%)
+    position: absolute
+    width: 150px
+    height: 150px
+    background: white
+    border-radius: 50%
 
   i
     font-size: 180%
 
-  .card
-    min-width: 200px
-    border: .1rem solid white
-    text-align: center
-    width: 95%
-    padding: .5rem
-    margin: .5rem
 
-  .title-box h2, .title-box h3
-    color: $light
 
 // Form
 .form-signup
@@ -774,7 +790,7 @@ body
   padding: 2rem
   margin: 0 auto
   margin-top: 4rem
-  border-radius: $border-radius $border-radius 0 0
+  border-radius: $border-radius
 
   h3
     font-weight: bold
@@ -815,9 +831,10 @@ body
   .row
     margin: 0
 
-.footer__logo
-
+.footer__item
   margin-bottom: 1rem
+
+
   img
     min-width: 300px
 
