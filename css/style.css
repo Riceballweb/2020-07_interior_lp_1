@@ -7301,22 +7301,21 @@ a.text-dark:hover, a.text-dark:focus {
     font-size: calc(.7rem + 0.7vw); }
 
 .title-box__inner {
-  border-bottom: 2px solid #103D65;
-  padding: 1rem 0;
+  padding-top: 1rem;
   margin-bottom: 1rem; }
 
-.hero-list {
+.advantage-list {
   font-size: 1.1rem;
   letter-spacing: 2px;
   list-style-type: none;
   padding: 0;
   margin: 0; }
-  .hero-list li {
+  .advantage-list li {
     font-size: calc(.8rem + 0.1vw);
     position: relative;
     display: inline-block;
-    margin-right: 2rem; }
-  .hero-list i {
+    margin-right: .5rem; }
+  .advantage-list i {
     margin-right: 5px;
     font-size: 1rem; }
 
@@ -7426,10 +7425,10 @@ mark,
   color: #f88132;
   background-color: transparent; }
 
-.mark__yellow {
+.mark--yellow {
   color: #f88132; }
 
-.mark__transparent {
+.mark--transparent {
   padding: .2em;
   color: #103D65; }
 
@@ -8199,16 +8198,16 @@ body {
       display: none; }
 
 .joined-box {
-  top: -80px;
-  left: 0;
-  padding: .2rem 1rem;
+  top: 0;
+  left: 6%;
+  padding: 0 1rem;
   position: absolute;
   display: inline-block;
   margin: 0 auto;
   margin-top: 1rem;
-  color: #f88132;
-  background: white;
-  transform: rotate(-5deg); }
+  color: #103D65;
+  border-radius: 5px 5px 0 0;
+  background: white; }
   .joined-box span {
     font-size: 2rem; }
 
