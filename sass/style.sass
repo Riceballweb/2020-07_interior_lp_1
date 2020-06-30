@@ -168,13 +168,13 @@ body
   padding-bottom: 5rem
 
 
-
 .card__answer
   margin-top: 1rem
   max-width: 400px
   min-width: 300px
-  border: 3px solid $primary
-  background: $light
+  outline: 2px solid $primary-light
+  border-bottom: 3px solid $primary
+  background: white
 
   &:nth-of-type(2)
     transform: scale(1.1)
@@ -747,7 +747,7 @@ body
 
   .card
     z-index: 2
-    background: white
+    background: $light
     min-width: 250px
     text-align: center
     width: 95%
@@ -757,14 +757,11 @@ body
     border: 2px solid rgba(255, 255, 255, 0.4)
     color: $primary
 
-    opacity: .9
     transition: .3s
 
     &:hover
-      opacity: 1
+      transform: translateY(-10px)
 
-    &:nth-of-type(3)
-      z-index: 1
 
   .card-body
     z-index: 1
@@ -782,22 +779,8 @@ body
   margin: .6rem
   position: relative
 
-
-  &::before
-    z-index: -1
-    content: ''
-    display: inline-block
-    top: -150%
-    left: 50%
-    transform: translate(-50%)
-    position: absolute
-    width: 150px
-    height: 150px
-    background: white
-    border-radius: 50%
-
   i
-    font-size: 180%
+    font-size: 210%
 
 
 

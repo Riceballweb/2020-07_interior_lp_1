@@ -1,7 +1,4 @@
 @charset "UTF-8";
-:root {
-  --primary: #555555; }
-
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7280,6 +7277,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 2rem;
   background: white;
   border: 0.2rem solid #103D65;
+  border-radius: 5px;
   box-shadow: 0.3rem 0.5rem #103D65; }
   .title-box::after {
     content: '';
@@ -7727,8 +7725,9 @@ body {
   margin-top: 1rem;
   max-width: 400px;
   min-width: 300px;
-  border: 3px solid #103D65;
-  background: #F9F9F9; }
+  outline: 2px solid #29597C;
+  border-bottom: 3px solid #103D65;
+  background: white; }
   .card__answer:nth-of-type(2) {
     transform: scale(1.1); }
   .card__answer h3 {
@@ -8216,7 +8215,7 @@ body {
   margin: 0 auto; }
   .card-deck__signup .card {
     z-index: 2;
-    background: white;
+    background: #F9F9F9;
     min-width: 250px;
     text-align: center;
     width: 95%;
@@ -8225,12 +8224,9 @@ body {
     border-color: white;
     border: 2px solid rgba(255, 255, 255, 0.4);
     color: #103D65;
-    opacity: .9;
     transition: .3s; }
     .card-deck__signup .card:hover {
-      opacity: 1; }
-    .card-deck__signup .card:nth-of-type(3) {
-      z-index: 1; }
+      transform: translateY(-10px); }
   .card-deck__signup .card-body {
     z-index: 1;
     padding: 0; }
@@ -8243,20 +8239,8 @@ body {
 .card-deck-icon__signup {
   margin: .6rem;
   position: relative; }
-  .card-deck-icon__signup::before {
-    z-index: -1;
-    content: '';
-    display: inline-block;
-    top: -150%;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background: white;
-    border-radius: 50%; }
   .card-deck-icon__signup i {
-    font-size: 180%; }
+    font-size: 210%; }
 
 .form-signup {
   max-width: 600px;
