@@ -11,7 +11,7 @@ step: 60,
 minDate:'-2020/01/00',
 maxDate:'+1970/04/01',
 minTime: '10:00',
-maxTime: '22:00',
+maxTime: '21:00',
 });
 
 // Form

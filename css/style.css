@@ -7760,12 +7760,14 @@ body {
 
 .section-timeline {
   position: relative; }
+  .section-timeline .container-fluid, .section-timeline .container-sm, .section-timeline .container-md, .section-timeline .container-lg, .section-timeline .container-xl {
+    max-width: 1500px; }
 
 .section-timeline__intro {
   justify-content: center; }
 
 .timeline-nodes {
-  margin: 5rem 0;
+  margin: 8rem 0;
   position: relative; }
   .timeline-nodes:nth-child(even) {
     flex-direction: row-reverse; }
@@ -7795,6 +7797,7 @@ body {
   position: relative;
   border-radius: 0 0 10px 10px; }
   .timeline-content .tab-content {
+    margin: auto;
     position: relative;
     z-index: 2;
     border: 3px solid #103D65;
@@ -7956,7 +7959,7 @@ body {
   border-radius: 5px; }
   .timeline__slider__figure img {
     object-fit: cover;
-    max-height: 260px; }
+    max-height: 360px; }
   .timeline__slider__figure figcaption {
     position: relative;
     margin: .3rem 0;
