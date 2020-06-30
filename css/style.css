@@ -7701,28 +7701,32 @@ body {
     animation: flying 1s ease .8s infinite alternate; }
   .card__question:nth-of-type(2) img {
     animation: flying 1s ease 1s infinite alternate; }
+  .card__question:nth-of-type(3) img {
+    animation: flying 1s ease 1.2s infinite alternate; }
   .card__question .card-body {
-    border: 3px solid #103D65;
+    overflow: hidden;
+    border: 3px solid #29597C;
+    border-top: 3px solid #103D65;
     background: white; }
 
 .card__question__img::after {
-  z-index: 1;
   content: '';
   display: block;
-  top: 10%;
-  left: 10%;
+  width: 130%;
+  height: 250px;
   position: absolute;
-  width: 150px;
-  height: 150px;
-  background: #f88132;
+  top: -30%;
+  left: 50%;
+  transform: translate(-50%);
+  background: #f9e153;
   border-radius: 50%; }
 
 .section-answer {
   padding-bottom: 5rem; }
-  .section-answer .title-box {
-    margin-bottom: 7rem; }
 
 .card__answer {
+  margin-top: 1rem;
+  max-width: 400px;
   min-width: 300px;
   border: 3px solid #103D65;
   background: #F9F9F9; }
@@ -7768,6 +7772,7 @@ body {
 
 .timeline-nodes {
   margin: 8rem 0;
+  margin-bottom: 10vw;
   position: relative; }
   .timeline-nodes:nth-child(even) {
     flex-direction: row-reverse; }
@@ -7798,6 +7803,7 @@ body {
   border-radius: 0 0 10px 10px; }
   .timeline-content .tab-content {
     margin: auto;
+    margin-top: 100px;
     position: relative;
     z-index: 2;
     border: 3px solid #103D65;
@@ -7808,6 +7814,7 @@ body {
       margin: 0; }
 
 .nav-tabs {
+  margin-top: 100px;
   flex-wrap: nowrap;
   z-index: 1;
   border: 0;
@@ -7886,6 +7893,7 @@ body {
 
 .timeline-nodes:nth-child(odd) .timeline-content::after {
   content: "";
+  margin-top: 100px;
   position: absolute;
   top: 30%;
   left: 100%;
@@ -7896,6 +7904,7 @@ body {
 
 .timeline-nodes:nth-child(even) .timeline-content::after {
   content: "";
+  margin-top: 100px;
   position: absolute;
   top: 30%;
   right: 100%;
