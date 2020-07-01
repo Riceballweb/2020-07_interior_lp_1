@@ -7326,7 +7326,7 @@ a.text-dark:hover, a.text-dark:focus {
   letter-spacing: 2px;
   list-style-type: none;
   padding: 0;
-  margin: 0 3rem; }
+  margin: 0; }
   .advantage-list li {
     font-size: calc(.8rem + 0.1vw);
     position: relative;
@@ -8225,7 +8225,8 @@ body {
   padding: .2rem 1rem;
   transform: translate(-50%);
   background: #f9e153;
-  color: #103D65; }
+  color: #103D65;
+  border: 3px solid #103D65; }
 
 .joined-box {
   top: 0;
