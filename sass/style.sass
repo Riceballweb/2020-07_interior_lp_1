@@ -191,12 +191,9 @@ body
     list-style-type: none
 
   li
-
     position: relative
     display: block
     margin: 1rem 0
-
-
 
     &::after
       content: ''
@@ -209,6 +206,9 @@ body
       border-style: solid
       border-width: 5px 5px 0 5px
       border-color: $primary transparent transparent transparent
+  img
+    max-height: 300px
+
 
   li:last-of-type()
     &::after
@@ -724,6 +724,17 @@ body
     &::before, &::after
       display: none
 
+.title-box__signup__badget
+  white-space: nowrap
+  position: absolute
+  top: -15%
+  left: 50%
+  padding: .2rem 1rem
+  transform: translate(-50%)
+  background: $yellow
+  color: $primary
+
+
 
 .joined-box
   top: 0
@@ -756,7 +767,7 @@ body
     border-color: white
     border: 2px solid rgba(255, 255, 255, 0.4)
     color: $primary
-
+    +hard-shadow
     transition: .3s
 
     &:hover
@@ -768,8 +779,7 @@ body
     padding: 0
 
     h4
-      margin: 0
-      margin: 1rem 0 .5rem 0
+      margin: 0 0 .2rem 0
 
   .title-box h2, .title-box h3
     color: $light
@@ -782,6 +792,14 @@ body
   i
     font-size: 210%
 
+.card-deck-icon__signup__meta
+  position: absolute
+  top: -5%
+  left: 50%
+  transform: translate(-50%)
+  background: $primary-light
+  color: white
+  padding: .2rem .5rem
 
 
 // Form
@@ -793,6 +811,7 @@ body
   margin: 0 auto
   margin-top: 4rem
   border-radius: $border-radius
+  +hard-shadow
 
   h3
     font-weight: bold
