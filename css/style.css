@@ -7310,16 +7310,9 @@ a.text-dark:hover, a.text-dark:focus {
     position: relative;
     font-weight: bold; }
   .title-box h3 {
+    font-weight: normal;
     line-height: 1.5;
     font-size: calc(.7rem + 0.7vw); }
-
-.title-box__inner {
-  background: #f88132;
-  color: white;
-  border-bottom: 4px solid #103D65;
-  padding: 1rem 0;
-  padding-top: 1.3rem;
-  margin-bottom: 1rem; }
 
 .advantage-list {
   font-size: 1.1rem;
@@ -7412,6 +7405,8 @@ a.text-dark:hover, a.text-dark:focus {
     letter-spacing: 2px; }
   .feedback-card__item h5 {
     font-weight: bold; }
+  .feedback-card__item time {
+    color: red; }
 
 .feedback-card__top {
   border-bottom: 1px solid #103D65;
@@ -7434,6 +7429,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 .feedback-card__rating {
   color: #f88132; }
+
+.feedback-card__body time {
+  color: #29597C; }
 
 mark,
 .mark {
@@ -7618,6 +7616,8 @@ body {
   height: 100vh;
   color: white; }
   .section-hero .jumbotron-fluid {
+    padding: 0;
+    margin: 0;
     position: relative;
     z-index: 100;
     text-align: center;
@@ -7640,11 +7640,8 @@ body {
       max-width: 1000px;
       width: 100%;
       min-height: 500px;
+      height: 100%;
       background: url(../images/svg/hero.svg) no-repeat center; }
-    .section-hero .jumbotron-fluid h2 {
-      margin: 0 auto;
-      padding: 1rem;
-      font-size: 100%; }
 
 .videoContainer {
   z-index: 0;
@@ -7657,22 +7654,11 @@ body {
   right: 0;
   overflow: hidden; }
   .videoContainer iframe {
-    transform: scale(1.3);
     width: 100%;
     height: 100%; }
 
 .section-question {
   padding-bottom: 4rem; }
-  .section-question::before {
-    z-index: 200;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100px;
-    border-radius: 50%;
-    background: white;
-    position: absolute;
-    transform: translateY(-50%) scale(1.3); }
   .section-question .container {
     position: relative;
     z-index: 300; }
@@ -7714,8 +7700,6 @@ body {
     letter-spacing: 1px;
     font-size: 1.3rem;
     margin-top: 1rem; }
-  .card__question p {
-    font-size: .9rem; }
   .card__question img {
     position: relative;
     z-index: 100;
@@ -7733,17 +7717,19 @@ body {
     border-top: 3px solid #103D65;
     background: white; }
 
-.card__question__img::after {
-  content: '';
-  display: block;
-  width: 130%;
-  height: 250px;
-  position: absolute;
-  top: -30%;
-  left: 50%;
-  transform: translate(-50%);
-  background: #f9e153;
-  border-radius: 50%; }
+.card__question__img {
+  position: relative; }
+  .card__question__img::after {
+    content: '';
+    display: block;
+    width: 130%;
+    height: 250px;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%);
+    background: #f9e153;
+    border-radius: 50%; }
 
 .section-answer {
   padding-bottom: 5rem; }
@@ -8214,13 +8200,16 @@ body {
   .section-signup .container-fluid, .section-signup .container-sm, .section-signup .container-md, .section-signup .container-lg, .section-signup .container-xl {
     max-width: 1500px; }
   .section-signup .title-box {
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     margin: 0;
     text-align: center;
     width: 100%;
     margin-top: -2rem;
-    color: #103D65;
+    color: white;
+    background: #f88132;
     border-radius: 5px; }
     .section-signup .title-box::before, .section-signup .title-box::after {
       display: none; }
@@ -8228,13 +8217,17 @@ body {
 .title-box__signup__badget {
   white-space: nowrap;
   position: absolute;
-  top: -15%;
+  top: -18%;
   left: 50%;
-  padding: .2rem 1rem;
+  margin: 0;
+  padding: .3rem 1rem;
   transform: translate(-50%);
   background: #f9e153;
   color: #103D65;
   border: 3px solid #103D65; }
+  .title-box__signup__badget h3 {
+    font-weight: bold;
+    margin: 0; }
 
 .joined-box {
   top: 0;
@@ -8301,6 +8294,8 @@ body {
   .form-signup h3 {
     font-weight: bold;
     font-size: 2rem; }
+  .form-signup p {
+    font-size: 1rem; }
 
 .datetimepicker {
   background: transparent;
@@ -8410,4 +8405,7 @@ body {
 
 @media (max-width: 768px) {
   .timeline::before {
-    display: none; } }
+    display: none; }
+  .section-hero {
+    height: 100%;
+    max-height: 400px; } }
