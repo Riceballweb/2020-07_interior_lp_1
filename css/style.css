@@ -7204,6 +7204,21 @@ a.text-dark:hover, a.text-dark:focus {
   bottom: 20px;
   right: 80px;
   color: #103D65; }
+  .form-shortcut::after {
+    opacity: 0;
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    background: url("../images/svg/gift.svg"); }
+  .form-shortcut:hover::after, .form-shortcut:active::after {
+    opacity: 1; }
 
 .box-handdraw {
   position: absolute;
@@ -7631,15 +7646,6 @@ body {
     display: flex;
     align-items: center;
     height: 100%; }
-    .section-hero .jumbotron-fluid::before {
-      z-index: -1;
-      content: '';
-      position: absolute;
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: black;
-      opacity: .7; }
     .section-hero .jumbotron-fluid h1 {
       margin: 0 auto;
       margin-bottom: 10%;
@@ -7689,7 +7695,7 @@ body {
     transform: rotate(-45deg); }
 
 .videoContainer {
-  z-index: 0;
+  z-index: -1;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -7698,7 +7704,16 @@ body {
   bottom: 0;
   right: 0;
   overflow: hidden; }
-  .videoContainer iframe {
+  .videoContainer::before {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .7; }
+  .videoContainer img {
     width: 100%;
     height: 100%; }
 
@@ -8109,12 +8124,15 @@ body {
   width: 100%; }
 
 .big-gallery .slick-current {
+  z-index: 1000;
+  filter: contrast(2);
   transform: scale(1.3); }
 
 .big-gallery__item {
+  filter: contrast(0.5);
   position: relative; }
   .big-gallery__item img {
-    width: 80%;
+    width: 90%;
     height: 100%;
     margin: 0 auto; }
   .big-gallery__item figcaption {
@@ -8122,7 +8140,7 @@ body {
     font-size: .7rem;
     font-weight: bold;
     letter-spacing: 2px;
-    bottom: 6%;
+    bottom: 10%;
     left: 15%;
     position: absolute;
     background: #F9F9F9;
@@ -8474,4 +8492,6 @@ body {
     top: -60%;
     left: 50%;
     transform: translate(-50%);
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+  .big-gallery__item img {
+    width: 100%; } }
