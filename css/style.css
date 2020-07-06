@@ -7658,13 +7658,14 @@ body {
       height: 100%;
       background: url(../images/svg/hero.svg) no-repeat center; }
 
-.logo {
+.hero-logo {
   position: absolute;
   top: 5%;
   left: 5%;
-  width: 230px;
+  width: 50%;
+  max-width: 200px;
   z-index: 1000; }
-  .logo img {
+  .hero-logo img {
     width: 100%; }
 
 .hero-down-arrow {
@@ -8482,6 +8483,9 @@ body {
   .section-hero {
     height: 100%;
     max-height: 400px; }
+  .hero-logo {
+    left: 50%;
+    transform: translate(-50%); }
   .hero-down-arrow {
     display: none; }
   .footer__item {
