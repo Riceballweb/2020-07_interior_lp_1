@@ -7370,17 +7370,20 @@ a.text-dark:hover, a.text-dark:focus {
   opacity: .6;
   background: white;
   overflow: hidden;
-  min-width: 550px;
+  min-width: 450px;
   max-height: 300px;
   border-radius: 5px;
   transition: .3s; }
   .namecard__item img {
-    max-width: 250px; }
+    max-width: 190px;
+    height: 100%;
+    object-fit: cover; }
 
 .namecard__item__content {
   text-align: left;
   padding: 1rem; }
   .namecard__item__content span {
+    font-size: .95rem;
     display: inline-block;
     color: gray;
     margin-bottom: 1rem; }
@@ -8494,4 +8497,6 @@ body {
     transform: translate(-50%);
     font-size: 1.5rem; }
   .big-gallery__item img {
-    width: 100%; } }
+    width: 100%; }
+  .feedback-card__item {
+    max-width: 300px; } }
