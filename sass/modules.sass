@@ -223,10 +223,9 @@
     overflow-x: hidden
 
 .namecard__item
-
   overflow: hidden
-  opacity: .6
-  background: white
+  filter: contrast(.6)
+  background: $light
   min-width: 450px
   border-radius: $border-radius
   transition: .3s
@@ -234,11 +233,12 @@
   img
     float: left
     max-width: 190px
-    height: 100%
     object-fit: cover
 
 .namecard__item__content
   text-align: left
+
+
   padding: 1rem
 
   span
@@ -256,8 +256,9 @@
 
 // Item in the center
 .slick-current .namecard__item
-  opacity: 1
-  transform: scale(1)
+  filter: contrast(1)
+
+
 
 
 .feedback-card
